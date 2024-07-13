@@ -17,7 +17,9 @@
     "url": "https://github.com/THE-AUDIO/Art-Gallery/issues"
   },
   "homepage": "https://github.com/THE-AUDIO/Art-Gallery#readme",
-  "devDependencies": {
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4"
   }
 }
