@@ -1,5 +1,25 @@
 {
+  "name": "art-gallery",
+  "version": "1.0.0",
+  "description": "Application de partage de photo d'art",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THE-AUDIO/Art-Gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/THE-AUDIO/Art-Gallery/issues"
+  },
+  "homepage": "https://github.com/THE-AUDIO/Art-Gallery#readme",
   "devDependencies": {
-    "tailwindcss": "^3.4.4"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6"
   }
 }
