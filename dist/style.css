@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -569,6 +569,11 @@ video {
   margin-right: auto;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -579,6 +584,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-12 {
@@ -607,10 +616,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
 }
 
 @keyframes bounce {
@@ -682,6 +687,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-\[url\(\'https\:\/\/images\.joseartgallery\.com\/100736\/what-kind-of-art-is-popular-right-now\.jpg\'\)\] {
   background-image: url('https://images.joseartgallery.com/100736/what-kind-of-art-is-popular-right-now.jpg');
 }
@@ -692,10 +701,6 @@ video {
 
 .bg-center {
   background-position: center;
-}
-
-.bg-repeat {
-  background-repeat: repeat;
 }
 
 .bg-no-repeat {
@@ -712,6 +717,11 @@ video {
 
 .p-20 {
   padding: 5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .text-center {
@@ -777,27 +787,119 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@media (min-width: 320px) {
+  .android\:h-\[\] {
+    height: ;
+  }
+
+  .android\:h-\[4\] {
+    height: 4;
+  }
+
+  .android\:h-\[45\] {
+    height: 45;
+  }
+
+  .android\:h-\[45vh\] {
+    height: 45vh;
+  }
+
+  .android\:w-1\/2 {
+    width: 50%;
+  }
+
+  .android\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .android\:w-\[\] {
+    width: ;
+  }
+
+  .android\:w-\[75\] {
+    width: 75;
+  }
+
+  .android\:w-\[75\%\] {
+    width: 75%;
+  }
+
+  .android\:bg-transparent {
+    background-color: transparent;
+  }
+
+  .android\:p-1 {
+    padding: 0.25rem;
+  }
+
+  .android\:p-2 {
+    padding: 0.5rem;
+  }
+
+  .android\:p-10 {
+    padding: 2.5rem;
+  }
+}
+
 @media (min-width: 640px) {
-  .sm\:hidden {
-    display: none;
+  .sm\:w-1\/4 {
+    width: 25%;
+  }
+
+  .sm\:w-5\/6 {
+    width: 83.333333%;
   }
 
   .sm\:w-1\/2 {
     width: 50%;
   }
 
-  .sm\:w-5\/6 {
-    width: 83.333333%;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:w-1\/2 {
-    width: 50%;
+  .sm\:rounded-r-3xl {
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-1\/4 {
+    width: 25%;
+  }
+
+  .md\:w-\[\] {
+    width: ;
+  }
+
+  .md\:w-\[7\] {
+    width: 7;
+  }
+
+  .md\:w-\[70\] {
+    width: 70;
+  }
+
+  .md\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:rounded-r-3xl {
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
   .lg\:block {
     display: block;
   }
@@ -816,5 +918,9 @@ video {
 
   .lg\:w-5\/6 {
     width: 83.333333%;
+  }
+
+  .lg\:w-1\/4 {
+    width: 25%;
   }
 }

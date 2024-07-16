@@ -1,3 +1,10 @@
+body{
+    background-color: #f9f4f4;
+}
 .container-elt{
     box-shadow: 0 0 .3rem #6B21A8;
+}
+input{
+    color: #6B21A8;
+    font-weight: bold;
 }
