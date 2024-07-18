@@ -8,3 +8,6 @@ input{
     color: #6B21A8;
     font-weight: bold;
 }
+.right-class{
+    background-image: url('../../img/art-gallery-login-page.jpg');
+}
