@@ -618,6 +618,18 @@ video {
   left: 0.5rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -730,6 +742,22 @@ video {
   height: 100%;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[5rem\] {
+  height: 5rem;
+}
+
+.h-\[2rem\] {
+  height: 2rem;
+}
+
+.h-\[4rem\] {
+  height: 4rem;
+}
+
 .w-1\/4 {
   width: 25%;
 }
@@ -760,6 +788,14 @@ video {
 
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-\[5rem\] {
+  width: 5rem;
+}
+
+.w-\[4rem\] {
+  width: 4rem;
 }
 
 @keyframes bounce {
@@ -877,6 +913,16 @@ video {
 
 .bg-\[\] {
   background-color: ;
+}
+
+.bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+
+.bg-purple-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(88 28 135 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\"\"\)\] {
@@ -1611,6 +1657,22 @@ video {
 
   .\32xl\:h-\[10rem\] {
     height: 10rem;
+  }
+
+  .\32xl\:h-\[25\] {
+    height: 25;
+  }
+
+  .\32xl\:h-\[25vh\] {
+    height: 25vh;
+  }
+
+  .\32xl\:h-\[50vh\] {
+    height: 50vh;
+  }
+
+  .\32xl\:h-\[500vh\] {
+    height: 500vh;
   }
 
   .\32xl\:w-\[\] {
