@@ -1127,6 +1127,10 @@ video {
     height: 2.25rem;
   }
 
+  .sm\:h-\[0vh\] {
+    height: 0vh;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }

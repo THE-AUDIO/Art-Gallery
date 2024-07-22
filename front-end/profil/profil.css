@@ -1,14 +1,17 @@
-.head{
+.head {
     border-radius: 0 0 5rem 5rem;
     transition: 200ms ease-in-out !important;
 }
-#identifiant{
+
+#identifiant {
     transition: 200ms ease-in-out !important;
 }
-#selection{
+
+#selection {
     transition: 200ms ease-in-out !important;
 }
-.grid-container{
+
+.grid-container {
     transition: 200ms ease-in-out !important;
     overflow-y: auto !important;
     display: grid;
@@ -19,8 +22,9 @@
     border-radius: 1rem;
     padding: .5rem;
 }
-@media screen  and  (min-width: 640px) {
-    .grid-container{
+
+@media screen and (min-width: 640px) {
+    .grid-container {
         overflow-y: auto !important;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) !important;
@@ -28,42 +32,54 @@
         grid-auto-rows: 20rem;
         border-radius: 1rem;
         padding: .5rem;
+        height: 35rem;
     }
-    .up-container{
+
+    .up-container {
         transition: 200ms ease-in-out;
         transform: translateY(-350px) !important;
     }
 }
+
 @media screen and (min-width:1028px) {
-        .grid-container{
-            height: 25rem !important;
-        }
-        .up-container{
-            transition: 200ms ease-in-out;
-            transform: translateY(-270px) !important;
-        }
+    .grid-container {
+        height: 38rem !important;
+    }
+
+    .up-container {
+        transition: 200ms ease-in-out;
+        transform: translateY(-350px) !important;
+    }
 }
-@media screen  and (min-width:1280px) {
-    .head{
+
+@media screen and (min-width:1280px) {
+    .head {
         margin: 0 auto !important;
         border-radius: 0 0 50rem 50rem !important;
     }
-    .grid-container{
-        height: 35rem !important;
+
+    .grid-container {
+        height: 45rem !important;
     }
-    .up-container{
+
+    .up-container {
         transition: 200ms ease-in-out;
         transform: translateY(-200px) !important;
     }
-    
+
 }
-.up-container{
+
+
+
+.up-container {
     transition: 200ms ease-in-out;
     transform: translateY(-260px);
 }
-.up-post{
+
+.up-post {
     height: 80vh !important;
 }
-.transform{
+
+.transform {
     transform: rotate('180deg');
 }
