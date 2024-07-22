@@ -1,7 +1,15 @@
 .head{
     border-radius: 0 0 5rem 5rem;
+    transition: 200ms ease-in-out !important;
+}
+#identifiant{
+    transition: 200ms ease-in-out !important;
+}
+#selection{
+    transition: 200ms ease-in-out !important;
 }
 .grid-container{
+    transition: 200ms ease-in-out !important;
     overflow-y: auto !important;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -21,10 +29,18 @@
         border-radius: 1rem;
         padding: .5rem;
     }
+    .up-container{
+        transition: 200ms ease-in-out;
+        transform: translateY(-350px) !important;
+    }
 }
 @media screen and (min-width:1028px) {
         .grid-container{
             height: 25rem !important;
+        }
+        .up-container{
+            transition: 200ms ease-in-out;
+            transform: translateY(-270px) !important;
         }
 }
 @media screen  and (min-width:1280px) {
@@ -35,5 +51,19 @@
     .grid-container{
         height: 35rem !important;
     }
+    .up-container{
+        transition: 200ms ease-in-out;
+        transform: translateY(-200px) !important;
+    }
     
+}
+.up-container{
+    transition: 200ms ease-in-out;
+    transform: translateY(-260px);
+}
+.up-post{
+    height: 80vh !important;
+}
+.transform{
+    transform: rotate('180deg');
 }
