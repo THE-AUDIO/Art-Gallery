@@ -956,6 +956,11 @@ video {
   padding-right: 1.25rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -1083,6 +1088,18 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .sm\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:hidden {
     display: none;
   }
@@ -1131,6 +1148,50 @@ video {
     height: 0vh;
   }
 
+  .sm\:h-2 {
+    height: 0.5rem;
+  }
+
+  .sm\:h-\[10\] {
+    height: 10;
+  }
+
+  .sm\:h-\[10vh\] {
+    height: 10vh;
+  }
+
+  .sm\:h-1 {
+    height: 0.25rem;
+  }
+
+  .sm\:h-1\/4 {
+    height: 25%;
+  }
+
+  .sm\:h-1\/2 {
+    height: 50%;
+  }
+
+  .sm\:h-60 {
+    height: 15rem;
+  }
+
+  .sm\:h-\[3vh\] {
+    height: 3vh;
+  }
+
+  .sm\:h-\[35vh\] {
+    height: 35vh;
+  }
+
+  .sm\:h-\[5\] {
+    height: 5;
+  }
+
+  .sm\:h-\[5vh\] {
+    height: 5vh;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -1166,6 +1227,10 @@ video {
   .sm\:rounded-r-3xl {
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+  }
+
+  .sm\:pt-8 {
+    padding-top: 2rem;
   }
 
   .sm\:text-3xl {
@@ -1465,5 +1530,17 @@ video {
 @media (min-width: 1536px) {
   .\32xl\:block {
     display: block;
+  }
+
+  .\32xl\:h-\[\] {
+    height: ;
+  }
+
+  .\32xl\:h-\[20\] {
+    height: 20;
+  }
+
+  .\32xl\:h-\[20vh\] {
+    height: 20vh;
   }
 }

@@ -64,7 +64,7 @@
 
     .up-container {
         transition: 200ms ease-in-out;
-        transform: translateY(-200px) !important;
+        transform: translateY(-210px) !important;
     }
 
 }
@@ -78,8 +78,4 @@
 
 .up-post {
     height: 80vh !important;
-}
-
-.transform {
-    transform: rotate('180deg');
 }
