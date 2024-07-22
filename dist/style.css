@@ -630,8 +630,20 @@ video {
   bottom: 1.5rem;
 }
 
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .z-50 {
   z-index: 50;
+}
+
+.z-0 {
+  z-index: 0;
 }
 
 .mx-0 {
@@ -1673,6 +1685,10 @@ video {
 
   .\32xl\:h-\[500vh\] {
     height: 500vh;
+  }
+
+  .\32xl\:h-\[vh\] {
+    height: vh;
   }
 
   .\32xl\:w-\[\] {

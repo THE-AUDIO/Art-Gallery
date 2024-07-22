@@ -52,7 +52,7 @@
     }
 }
 
-@media screen and (min-width:1280px) {
+@media all and (min-width:1280px) {
     .head {
         margin: 0 auto !important;
         border-radius: 0 0 50rem 50rem !important;
@@ -68,9 +68,6 @@
     }
 
 }
-
-
-
 .up-container {
     transition: 200ms ease-in-out;
     transform: translateY(-260px);
