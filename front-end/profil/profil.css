@@ -1,3 +1,12 @@
+body{
+    overflow-x: hidden !important;
+}
+.add-post{
+    z-index: -5;
+    opacity: 0;
+    transition: ease-in-out 500ms;
+    transform: translate(-100%, 1000px);
+}
 .head {
     border-radius: 0 0 5rem 5rem;
     transition: 200ms ease-in-out !important;
@@ -21,6 +30,18 @@
     border-radius: 1rem;
     padding: .5rem;
 }
+@media screen and (min-width: 320px){
+    .add-post{
+        z-index: -1;
+        opacity: 0;
+        transition: ease-in-out 500ms;
+        transform: translate(5%, 500px);
+    }
+    .grid-container {
+        max-width: 100%;
+        height: 35rem;
+    }
+}
 
 @media screen and (min-width: 640px) {
     .grid-container {
@@ -42,7 +63,7 @@
 
 @media screen and (min-width:1028px) {
     .grid-container {
-        height: 38rem !important;
+        height: 45rem !important;
     }
 
     .up-container {
@@ -77,5 +98,4 @@
 }
 .edit-profil{
     display: none;  
-    /* transform: scale(0); */
 }
