@@ -934,6 +934,10 @@ video {
   border-radius: 1rem;
 }
 
+.rounded-none {
+  border-radius: 0px;
+}
+
 .rounded-l-3xl {
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
@@ -1347,8 +1351,104 @@ video {
 }
 
 @media (min-width: 320px) {
+  .android\:h-\[1\] {
+    height: 1;
+  }
+
+  .android\:h-\[200px\] {
+    height: 200px;
+  }
+
+  .android\:h-\[2\] {
+    height: 2;
+  }
+
+  .android\:h-40 {
+    height: 10rem;
+  }
+
+  .android\:h-1 {
+    height: 0.25rem;
+  }
+
+  .android\:h-10 {
+    height: 2.5rem;
+  }
+
+  .android\:h-5 {
+    height: 1.25rem;
+  }
+
+  .android\:h-\[\] {
+    height: ;
+  }
+
+  .android\:h-\[3rem\] {
+    height: 3rem;
+  }
+
+  .android\:h-20 {
+    height: 5rem;
+  }
+
+  .android\:h-11 {
+    height: 2.75rem;
+  }
+
   .android\:w-5\/6 {
     width: 83.333333%;
+  }
+
+  .android\:w-full {
+    width: 100%;
+  }
+
+  .android\:w-5 {
+    width: 1.25rem;
+  }
+
+  .android\:translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .android\:translate-y-0 {
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .android\:translate-x-2 {
+    --tw-translate-x: 0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .android\:translate-x-20 {
+    --tw-translate-x: 5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .android\:translate-x-4 {
+    --tw-translate-x: 1rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .android\:translate-x-10 {
+    --tw-translate-x: 2.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .android\:translate-y-10 {
+    --tw-translate-y: 2.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .android\:translate-y-20 {
+    --tw-translate-y: 5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .android\:rounded-none {
+    border-radius: 0px;
   }
 
   .android\:bg-transparent {
@@ -1381,6 +1481,10 @@ video {
     height: 5vh;
   }
 
+  .sm\:h-6 {
+    height: 1.5rem;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -1399,6 +1503,10 @@ video {
 
   .sm\:w-9 {
     width: 2.25rem;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 
   .sm\:rounded-r-3xl {
@@ -1473,6 +1581,10 @@ video {
     height: 70vh;
   }
 
+  .lg\:h-\[4rem\] {
+    height: 4rem;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -1487,6 +1599,24 @@ video {
 
   .lg\:w-\[12rem\] {
     width: 12rem;
+  }
+
+  .lg\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .lg\:translate-x-1\/2 {
+    --tw-translate-x: 50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:translate-y-1\/2 {
+    --tw-translate-y: 50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:rounded-3xl {
+    border-radius: 1.5rem;
   }
 }
 
