@@ -2,7 +2,6 @@
     border-radius: 0 0 5rem 5rem;
     transition: 200ms ease-in-out !important;
 }
-
 #identifiant {
     transition: 200ms ease-in-out !important;
 }
@@ -75,4 +74,8 @@
 
 .up-post {
     height: 80vh !important;
+}
+.edit-profil{
+    display: none;  
+    /* transform: scale(0); */
 }
