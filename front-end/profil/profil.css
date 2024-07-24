@@ -1,0 +1,108 @@
+
+
+.head {
+    border-radius: 0 0 5rem 5rem;
+    transition: 200ms ease-in-out !important;
+}
+#identifiant {
+    transition: 200ms ease-in-out !important;
+}
+
+#selection {
+    transition: 200ms ease-in-out !important;
+}
+
+.grid-container {
+    transition: 200ms ease-in-out !important;
+    overflow-y: auto !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .5rem;
+    grid-auto-rows: 8rem;
+    height: 22rem;
+    border-radius: 1rem;
+    padding: .5rem;
+}
+@media screen and (min-width: 320px){
+    body{
+        overflow: hidden !important;
+        max-width: 100%;
+    }
+    .grid-container {
+        max-width: 100%;
+        height: 35rem;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    body{
+        overflow: hidden !important;
+        max-width: 100%;
+    }
+    .grid-container {
+        overflow-y: auto !important;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) !important;
+        gap: .5rem;
+        grid-auto-rows: 20rem;
+        border-radius: 1rem;
+        padding: .5rem;
+        height: 35rem;
+    }
+
+    .up-container {
+        transition: 200ms ease-in-out;
+        transform: translateY(-350px) !important;
+    }
+}
+
+@media screen and (min-width:1028px) {
+    body{
+        overflow: hidden !important;
+        max-width: 100%;
+    }
+    .grid-container {
+        height: 45rem !important;
+    }
+
+    .up-container {
+        transition: 200ms ease-in-out;
+        transform: translateY(-350px) !important;
+    }
+}
+
+@media all and (min-width:1280px) {
+    body{
+        overflow: hidden !important;
+        max-width: 100%;
+    }
+    .head {
+        margin: 0 auto !important;
+        border-radius: 0 0 50rem 50rem !important;
+    }
+
+    .grid-container {
+        height: 45rem !important;
+        grid-auto-rows: 30rem;
+    }
+
+    .up-container {
+        transition: 200ms ease-in-out;
+        transform: translateY(-236px) !important;
+    }
+
+}
+.up-container {
+    transition: 200ms ease-in-out;
+    transform: translateY(-260px);
+}
+
+.up-post {
+    height: 80vh !important;
+}
+.edit-profil{
+    display: none;  
+}
+.add-post{
+    display: none;
+}
