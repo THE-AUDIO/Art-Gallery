@@ -677,6 +677,14 @@ video {
   margin-top: 2rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.-mt-10 {
+  margin-top: -2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -741,6 +749,26 @@ video {
   height: 10rem;
 }
 
+.h-\[100\] {
+  height: 100;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-1\/4 {
+  height: 25%;
+}
+
 .w-1\/4 {
   width: 25%;
 }
@@ -767,6 +795,10 @@ video {
 
 .w-\[40rem\] {
   width: 40rem;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .translate-x-0 {
@@ -811,6 +843,12 @@ video {
 
 .translate-x-full {
   --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -864,12 +902,24 @@ video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-around {
   justify-content: space-around;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .rounded-2xl {
@@ -925,6 +975,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-\[url\(\'https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcS-egksjLZrcFlqE9mLVdvgDPAHLKoNip5vkQ\&s\'\)\] {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-egksjLZrcFlqE9mLVdvgDPAHLKoNip5vkQ&s');
 }
@@ -939,6 +993,26 @@ video {
 
 .bg-\[url\(\'https\:\/\/static\.vecteezy\.com\/ti\/photos-gratuite\/t1\/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo\.jpg\'\)\] {
   background-image: url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg');
+}
+
+.bg-\[url\(\'\'\)\] {
+  background-image: url('');
+}
+
+.bg-\[url\(\'https\:\/\/cdn2\.imagine\.art\/imagine-frontend\/assets\/images\/RowImageSlider18\.webp\'\)\] {
+  background-image: url('https://cdn2.imagine.art/imagine-frontend/assets/images/RowImageSlider18.webp');
+}
+
+.bg-\[url\(\'https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAU\'\)\] {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAU');
+}
+
+.bg-\[url\(\'https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/cdn2\.imagine\.art\/imagine-frontend\/assets\/images\/RowImageSlider18\.webp\'\)\] {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://cdn2.imagine.art/imagine-frontend/assets/images/RowImageSlider18.webp');
+}
+
+.bg-\[url\(\'https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs\&usqp\=CAUhttps\:\/\/cdn2\.imagine\.art\/imagine-frontend\/assets\/images\/RowImageSlider18\.webp\'\)\] {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApzGQg21ZUlf4NFBpflm5NXb31CcVDEOLAcw1WY5WKfxcxIugLMEFGKsjJZNNO1LROOs&usqp=CAUhttps://cdn2.imagine.art/imagine-frontend/assets/images/RowImageSlider18.webp');
 }
 
 .bg-cover {
@@ -1004,6 +1078,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {
@@ -1073,6 +1152,10 @@ video {
   transition-delay: 500ms;
 }
 
+.delay-200 {
+  transition-delay: 200ms;
+}
+
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1101,6 +1184,11 @@ video {
 .file\:bg-purple-800::file-selector-button {
   --tw-bg-opacity: 1;
   background-color: rgb(107 33 168 / var(--tw-bg-opacity));
+}
+
+.file\:bg-purple-500::file-selector-button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
 }
 
 .file\:text-sm::file-selector-button {
@@ -1132,6 +1220,10 @@ video {
     height: 1.25rem;
   }
 
+  .android\:h-10 {
+    height: 2.5rem;
+  }
+
   .android\:w-5 {
     width: 1.25rem;
   }
@@ -1142,6 +1234,22 @@ video {
 
   .android\:w-full {
     width: 100%;
+  }
+
+  .android\:w-\[\] {
+    width: ;
+  }
+
+  .android\:w-\[1\/\] {
+    width: 1/;
+  }
+
+  .android\:w-\[1\/4\] {
+    width: 1/4;
+  }
+
+  .android\:w-10 {
+    width: 2.5rem;
   }
 
   .android\:translate-x-0 {
@@ -1327,6 +1435,10 @@ video {
     height: 70vh;
   }
 
+  .lg\:h-10 {
+    height: 2.5rem;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -1355,6 +1467,10 @@ video {
     width: 0.25rem;
   }
 
+  .lg\:w-10 {
+    width: 2.5rem;
+  }
+
   .lg\:translate-x-1\/2 {
     --tw-translate-x: 50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1377,6 +1493,14 @@ video {
 
   .lg\:rounded-3xl {
     border-radius: 1.5rem;
+  }
+
+  .lg\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  .lg\:rounded-xl {
+    border-radius: 0.75rem;
   }
 }
 

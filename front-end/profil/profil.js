@@ -31,12 +31,32 @@ document.addEventListener("DOMContentLoaded", function () {
         post.style.filter = 'blur(2px)'
         selection.style.filter = 'blur(2px)'
         container_profil.style.filter = 'blur(2px)'
+        identifiant.style.filter = 'blur(2px)'
+        // post.style.display='none'
+        // selection.style.display='none'
+        // container_profil.style.display='none'
+        // identifiant.style.display='none'
+
+        post.style.opacity='0.75'
+        selection.style.opacity='0.75'
+        container_profil.style.opacity='0.75'
+        identifiant.style.opacity='.75'
     }
 
     function unBlurSomeDiv(){
         post.style.filter = 'blur(0)'
         selection.style.filter = 'blur(0)'
         container_profil.style.filter = 'blur(0)'
+        identifiant.style.filter = 'blur(0)'
+        post.style.display='grid'
+        selection.style.display='flex'
+        container_profil.style.display='flex'
+        identifiant.style.display='flex'
+
+        post.style.opacity='1'
+        selection.style.opacity='1'
+        container_profil.style.opacity='1'
+        identifiant.style.opacity='1'
     }
     function hiddenEditProfil() {
         contentEditProfil.style.display = 'none';
@@ -69,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // we listen a scroll event in the div post and call the toogle function
 // if some condition is verified
     var states = true;
-    btn_up.style.opacity = '1';
+    btn_up.style.opacity = '0';
     post.addEventListener('scroll', () => {
         if (post.scrollTop >= positionInitial && states) {
             toggleClass();

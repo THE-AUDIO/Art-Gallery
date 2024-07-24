@@ -1,12 +1,5 @@
-body{
-    overflow-x: hidden !important;
-}
-.add-post{
-    z-index: -5;
-    opacity: 0;
-    transition: ease-in-out 500ms;
-    transform: translate(-100%, 1000px);
-}
+
+
 .head {
     border-radius: 0 0 5rem 5rem;
     transition: 200ms ease-in-out !important;
@@ -31,11 +24,9 @@ body{
     padding: .5rem;
 }
 @media screen and (min-width: 320px){
-    .add-post{
-        z-index: -1;
-        opacity: 0;
-        transition: ease-in-out 500ms;
-        transform: translate(5%, 500px);
+    body{
+        overflow: hidden !important;
+        max-width: 100%;
     }
     .grid-container {
         max-width: 100%;
@@ -44,6 +35,10 @@ body{
 }
 
 @media screen and (min-width: 640px) {
+    body{
+        overflow: hidden !important;
+        max-width: 100%;
+    }
     .grid-container {
         overflow-y: auto !important;
         display: grid;
@@ -62,6 +57,10 @@ body{
 }
 
 @media screen and (min-width:1028px) {
+    body{
+        overflow: hidden !important;
+        max-width: 100%;
+    }
     .grid-container {
         height: 45rem !important;
     }
@@ -73,6 +72,10 @@ body{
 }
 
 @media all and (min-width:1280px) {
+    body{
+        overflow: hidden !important;
+        max-width: 100%;
+    }
     .head {
         margin: 0 auto !important;
         border-radius: 0 0 50rem 50rem !important;
@@ -80,6 +83,7 @@ body{
 
     .grid-container {
         height: 45rem !important;
+        grid-auto-rows: 30rem;
     }
 
     .up-container {
@@ -98,4 +102,7 @@ body{
 }
 .edit-profil{
     display: none;  
+}
+.add-post{
+    display: none;
 }
