@@ -1,4 +1,4 @@
-.nav-bar{
+.nav-bar {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -7,73 +7,91 @@
     margin-top: 1rem;
     height: 20%;
 }
-ul{
+
+.liste1 {
     display: flex;
     list-style: none;
     justify-content: space-between;
     width: 40%;
     align-items: center;
 }
-button{
+
+.bt {
     width: 100%;
 }
-.boutton{
+
+.boutton {
     width: 10%;
     border: 1px purple solid;
-    color:white;
+    color: white;
     border-radius: 5px;
-    
+    height: 2rem;
+
 }
-.titre{
-    margin:9rem auto;
-    margin-bottom:1rem;
+
+.boutton:active {
+    box-shadow: 0 0 0.5rem gray;
+
+}
+
+.titre {
+    margin: 9rem auto;
+    margin-bottom: 1rem;
     font-size: 5rem;
     line-height: 4rem;
 }
-.recherche{
+
+.recherche {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:35% ;
+    width: 35%;
     margin: O auto;
     box-shadow: 0 0 0.25rem gray;
     height: 3rem;
     padding-left: 1rem;
     border-radius: 1rem;
-    
+
 }
-.container-input{
+
+.container-input {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-input{
+
+input {
     outline: none;
     border: none;
 }
-.icon{
+
+.icon {
     height: 100%;
     width: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0 1rem 1rem 0;
-    
+
 }
-.icon svg{
+
+.icon svg {
     fill: white;
 }
-.text-paragraph{
-    margin:5rem auto;
+
+.text-paragraph {
+    margin: 5rem auto;
     font-size: 1rem;
-    
+
 }
-.liste{
+
+.liste {
     position: relative;
 }
-.liste::before{
+
+.liste::before {
     position: absolute;
     transition: ease-in-out 300ms;
     content: "";
@@ -81,7 +99,8 @@ input{
     height: 0;
     bottom: 0;
 }
-.liste:hover::before{
+
+.liste:hover::before {
     width: 100%;
     height: 2px;
     background-color: purple;
@@ -89,6 +108,87 @@ input{
 }
 body{
     background: url(../image/Download\ premium\ vector\ of\ Black\ polygon\ pattern\ on\ white\ marble\ textured\ mobile\ phone\ wallpaper\ vector\ by\ Nunny\ about\ polygon\ technology\,\ marble\,\ iphone\ wallpaper\,\ black\ background\ iphone\ wallpaper\,\ and\ tech\ wallpape.jpg);
-
     background-position: center;
+    background-size: cover;
+}
+
+/* header {
+    background: url(../image/Download\ premium\ vector\ of\ Black\ polygon\ pattern\ on\ white\ marble\ textured\ mobile\ phone\ wallpaper\ vector\ by\ Nunny\ about\ polygon\ technology\,\ marble\,\ iphone\ wallpaper\,\ black\ background\ iphone\ wallpaper\,\ and\ tech\ wallpape.jpg);
+    background-position: center;
+    background-size: cover;
+} */
+
+header {
+    height: 40rem;
+}
+
+.section2 {
+    height:34rem;
+    margin:5rem;
+}
+
+.liste2 {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 0.25rem gray;
+    height: 3rem;
+    border-bottom: none;
+}
+.bt2{
+    width:15%;
+    height: 2rem;
+    border-radius: 5px;
+}
+.bt2:active{
+    box-shadow:0 0 0.5rem gray;
+}
+.gallery{
+    display: grid;
+    grid-template-columns:repeat(8,1fr);
+    grid-template-rows: repeat(8,4.5vw);
+    grid-gap: 10px;
+}
+.gallery_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.gallery-item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.gallery-item2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.gallery-item3{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 9;
+}
+.gallery-item4{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.gallery-item5{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+.gallery-item6{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 9;
 }
