@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnAddPost = document.getElementById('section-btn-add-post');
     let addPostSection = document.getElementById('add-post');
     let btnSavePost = document.getElementById('btn-add-post');
+    let btnCloseAddPost = document.getElementById('close-add-post')
     let positionInitial = 200;
 
 // all functions is here
@@ -32,15 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         selection.style.filter = 'blur(2px)'
         container_profil.style.filter = 'blur(2px)'
         identifiant.style.filter = 'blur(2px)'
-        // post.style.display='none'
-        // selection.style.display='none'
-        // container_profil.style.display='none'
-        // identifiant.style.display='none'
-
-        post.style.opacity='0.75'
-        selection.style.opacity='0.75'
-        container_profil.style.opacity='0.75'
-        identifiant.style.opacity='.75'
     }
 
     function unBlurSomeDiv(){
@@ -48,15 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
         selection.style.filter = 'blur(0)'
         container_profil.style.filter = 'blur(0)'
         identifiant.style.filter = 'blur(0)'
-        post.style.display='grid'
-        selection.style.display='flex'
-        container_profil.style.display='flex'
-        identifiant.style.display='flex'
-
-        post.style.opacity='1'
-        selection.style.opacity='1'
-        container_profil.style.opacity='1'
-        identifiant.style.opacity='1'
     }
     function hiddenEditProfil() {
         contentEditProfil.style.display = 'none';
@@ -78,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btnSavePost.addEventListener('click', hiddenAddPost)
     closeBtn.addEventListener('click', hiddenEditProfil);
     saveBtn.addEventListener('click', hiddenEditProfil);
-
+    btnCloseAddPost.addEventListener('click',hiddenAddPost);
     
     // here we make visible a edit profil section
     showEditProfilBtn.addEventListener('click', () => {
