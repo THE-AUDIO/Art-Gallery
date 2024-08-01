@@ -64,6 +64,11 @@
     top: 0;
     background-image: url('../connexion/image/sary2.png');
     border-radius: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: red; */
+    background-size: cover;
+   
  } 
 
  
@@ -153,3 +158,9 @@ input[type="submit"]{
     color: white;
     font-weight: bolder;
 } 
+
+@media(max-width){
+
+
+    
+}
