@@ -1,0 +1,7 @@
+.container-post{
+    background-color: rgba(0, 0, 0, 0.45);
+}
+.none-profil{
+   opacity: 1 !important;
+   transition: 500ms ease-in-out;
+}

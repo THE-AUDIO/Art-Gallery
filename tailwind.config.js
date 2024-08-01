@@ -21,11 +21,11 @@ module.exports = {
       },
       gridTemplateColumns: {
         // Custom column template similar to repeat(auto-fill, minmax(150px, 1fr))
-        'custom': 'repeat(auto-fill, minmax(150px, 1fr))',
+        'custom': 'repeat(auto-fill, minmax(300px, 1fr))',
       },
       gridAutoRows: {
-        // Custom row height similar to 8rem
-        'custom': '8rem',
+        // Custom row height similar to 16rem
+        'custom': '16rem',
       },
     },
   },

@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 // all event is here .......
-
     btnAddPost.addEventListener('click', ()=>{
         addPostSection.classList.remove('add-post');
         blurSomeDiv();
