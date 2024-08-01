@@ -4,8 +4,17 @@ window.addEventListener('DOMContentLoaded',()=>{
     const eltProfil = document.getElementById('elt-profil');
     container = document.getElementById('container');
     const allPost = container.querySelectorAll('.post');
-    // console.log(allPost);
-    
+    // element at alpost
+     allPost.forEach(element => {
+            const btnLike = element.children[0].children[1].children[0];
+            let containerLike = element.children[0].children[1].children[1];
+            let nbLike = +element.children[0].children[1].children[1].textContent;
+            btnLike.addEventListener('click',()=>{
+                containerLike.textContent='';
+                nbLike ++;
+                containerLike.textContent =`${nbLike}`
+            })
+     });
 
     // all event........
 

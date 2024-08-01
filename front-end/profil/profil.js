@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let addPostSection = document.getElementById('add-post');
     let btnSavePost = document.getElementById('btn-add-post');
     let btnCloseAddPost = document.getElementById('close-add-post')
-    let positionInitial = 200;
+    let positionInitial = 20;
 
 // all functions is here
 
