@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../dist/style.css">
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <nav class="bg-purple-800 fixed w-full top-0">
+        <div class="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between android:w-[100%]">
+
+            <div class="android:w-[70%] md:w-1/2 h-full flex">
+              <div class="android:hidden lg:w-1/2 md:w-1/2 md:flex md:justify-start md:items-center">
+                <h2 class="text-center  android:text-sm lg:text-2xl text-white font-bold"><span>Art</span>-<span>Gallery</span></h2>
+              </div>
+              <div class=" md:w-1/2 lg:w-1/2 android:w-[90%] android:h-full flex justify-between items-center">
+                <div class="flex justify-start items-center pl-5 w-full android:h-[3rem] md:h-[3rem] bg-white rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                    <input type="text" class="w-[80%] android:h-full outline-none pl-5 bg-transparent text-purple-800" placeholder="Searche ...">
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                </svg>
+              </button>
+      
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">Open user menu</span>
+                    <img id="profil" class="h-8 w-8 rounded-full cursor-pointer z-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                  </button>
+                </div>
+      
+                
+                  <!-- Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95" -->
+               
+                <div id="elt-profil" class="absolute transition-all opacity-0 right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none " role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                  <!-- Active: "bg-gray-100", Not Active: "" -->
+                  <a href="../profil/profil.html" class="block px-4 py-2 text-sm text-white-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                  <!-- <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a> -->
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+    </nav>
+    <div class="h-[90vh] grid grid-cols-custom gap-2 auto-rows-custom mt-[10vh]" id="container">
+        <div
+            class="post flex justify-end  items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg')] bg-center bg-no-repeat bg-cover">
+            <div class="container-post android:w-full h-1/3 android:text-xl   flex justify-between items-center flex-col text-center p-2 text-white md:text-2xl font-bold md:py-2 android:py-1 shadow-2xl shadow-white">
+             <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, hic.</span>
+              <span class="flex justify-around items-center flex-row w-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="pink" class="bi bi-suit-heart-fill transition active:animate-bounce" viewBox="0 0 16 16">
+                    <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+                  </svg> 
+                  <span> 39 </span>
+              </span>
+            </div>
+        </div>
+        
+        <div
+            class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg')] bg-center bg-no-repeat bg-cover">
+            <div class="container-post android:w-full h-1/3 android:text-xl flex justify-between items-center flex-col text-center p-2 text-white md:text-2xl font-bold md:py-2 android:py-1 shadow-2xl shadow-white">
+                <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, hic.</span>
+                 <span class="flex justify-around items-center flex-row w-1/2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill transition active:animate-bounce" viewBox="0 0 16 16">
+                       <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+                     </svg> 
+                     <span>55</span>
+                 </span>
+               </div>
+        </div>
+        <div
+            class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-pfp-01.jpg')] bg-center bg-no-repeat bg-cover">
+            <div class="container-post android:w-full h-1/3 android:text-xl   flex justify-between items-center flex-col text-center p-2 text-white md:text-2xl font-bold md:py-2 android:py-1 shadow-2xl shadow-white">
+                <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, hic.</span>
+                 <span class="flex justify-around items-center flex-row w-1/2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                       <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+                     </svg> 
+                     <span>120</span>
+                 </span>
+               </div>
+        </div>
+        <div
+            class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg')] bg-center bg-no-repeat bg-cover">
+            <div class="container-post android:w-full h-1/3 android:text-xl   flex justify-between items-center flex-col text-center p-2 text-white md:text-2xl font-bold md:py-2 android:py-1 shadow-2xl shadow-white">
+                <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, hic.</span>
+                 <span class="flex justify-around items-center flex-row w-1/2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                       <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+                     </svg> 
+                     <span>501</span>
+                 </span>
+               </div>
+        </div>
+    </div>
+<script src="./event.js"></script> 
+</body>
+</html>

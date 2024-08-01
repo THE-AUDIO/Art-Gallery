@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let addPostSection = document.getElementById('add-post');
     let btnSavePost = document.getElementById('btn-add-post');
     let btnCloseAddPost = document.getElementById('close-add-post')
-    let positionInitial = 200;
+    let positionInitial = 20;
 
 // all functions is here
 
@@ -29,10 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function blurSomeDiv(){
-        post.style.filter = 'blur(2px)'
-        selection.style.filter = 'blur(2px)'
-        container_profil.style.filter = 'blur(2px)'
-        identifiant.style.filter = 'blur(2px)'
+        post.style.filter = 'blur(32px)'
+        selection.style.filter = 'blur(32px)'
+        container_profil.style.filter = 'blur(32px)'
+        identifiant.style.filter = 'blur(32px)'
+        document.body.style.background='black'
+
     }
 
     function unBlurSomeDiv(){
@@ -40,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         selection.style.filter = 'blur(0)'
         container_profil.style.filter = 'blur(0)'
         identifiant.style.filter = 'blur(0)'
+        document.body.style.background='white'
     }
     function hiddenEditProfil() {
         contentEditProfil.style.display = 'none';
@@ -53,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 // all event is here .......
-
     btnAddPost.addEventListener('click', ()=>{
         addPostSection.classList.remove('add-post');
         blurSomeDiv();
