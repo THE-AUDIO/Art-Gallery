@@ -33,4 +33,4 @@ jobs:
 
       # Assurez-vous que cette étape est adaptée à vos besoins de test
       - name: Run tests
-        run: nest start 
+        run: npm run start 
