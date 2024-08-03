@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import * as dotenv from 'dotenv';
 import { User } from './entities/user';
+import { PostModule } from './post/post.module';
 
 
 dotenv.config()
@@ -24,7 +25,8 @@ dotenv.config()
       entities: [User],
       synchronize: true, // Assurez-vous que cette valeur est correcte pour votre environnement
     }),
-    AuthModule, // Assurez-vous que AuthModule est correctement configuré
+    AuthModule,
+    PostModule, // Assurez-vous que AuthModule est correctement configuré
   ],
   controllers: [AppController],
   providers: [AppService],
