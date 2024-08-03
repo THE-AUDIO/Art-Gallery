@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // await the document load  
 document.addEventListener("DOMContentLoaded", function () {
     // declaration of the html element
@@ -20,6 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
 // all functions is here
 
     // this function is used to move up the container
+=======
+
+document.addEventListener("DOMContentLoaded", function () {
+    let container_profil = document.getElementById('profil-container');
+    let btn = document.getElementById('up')
+    let identifiant = document.getElementById('identifiant')
+    let selection = document.getElementById('selection')
+    let post = document.getElementById('post')
+    let positionInitial = 200;
+
+>>>>>>> 811a925 (scroll animation)
     function toggleClass() {
         container_profil.classList.toggle('up-container')
         identifiant.classList.toggle('up-container')
@@ -27,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         post.classList.toggle('up-container')
         post.classList.toggle('up-post');
     }
+<<<<<<< HEAD
 
     function blurSomeDiv(){
         post.style.filter = 'blur(32px)'
@@ -97,4 +110,18 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth"
         })
     })
+=======
+    btn.addEventListener('click', toggleClass)
+    var states = true;
+    post.addEventListener('scroll', () => {
+        console.log(post.scrollTop);
+        if (post.scrollTop >= positionInitial && states) {
+                toggleClass();
+                states = false;
+        } else if (post.scrollTop  <= positionInitial && !states) {
+                states = true;
+                toggleClass();
+        }
+    });
+>>>>>>> 811a925 (scroll animation)
 })
