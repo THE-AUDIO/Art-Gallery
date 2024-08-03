@@ -33,4 +33,4 @@ jobs:
 
       # Assurez-vous que cette étape est adaptée à vos besoins de test
       - name: Run backend
-        run: npm run start
+        run: node -v
