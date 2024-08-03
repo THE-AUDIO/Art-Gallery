@@ -1,0 +1,24 @@
+name: art-gallery
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/setup-node@v4
+        with: 
+          node-version: '20'
+
+      - name: dependencies principale
+        run : npm install
+        
+      - name: go to backend
+        run: cd backEnd
+        
+      - name: dependencies backend
+        run: npm install
+        
+      - name: demarrage du serveur
+        run: nest start
