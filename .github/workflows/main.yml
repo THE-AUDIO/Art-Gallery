@@ -1,20 +1,28 @@
-name: art-gallery
+name: Art Gallery CI
 
 on: [push]
 
 jobs:
-  test:
+  build-and-test:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          DB_PASSWORD: The audio5143 # Utilisez un secret GitHub pour cela
+          DB_NAME: GALLERY
+        ports:
+          - 3306:3306
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
         
       - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with: 
+        uses: actions/setup-node@v2
+        with:
           node-version: '20'
 
-      - name: Install main dependencies
+      - name: Install dependencies
         run: npm install
 
       - name: Navigate to backend directory
@@ -22,6 +30,7 @@ jobs:
 
       - name: Install backend dependencies
         run: npm install
-        
-      - name: Start backend server
-        run: npm run start
+
+      # Assurez-vous que cette étape est adaptée à vos besoins de test
+      - name: Run tests
+        run: npm test
