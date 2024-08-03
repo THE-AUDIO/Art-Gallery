@@ -32,5 +32,5 @@ jobs:
         run: npm install
 
       # Assurez-vous que cette étape est adaptée à vos besoins de test
-      - name: Run tests
-        run: npm start 
+      - name: Run backend
+        run: npm run start
