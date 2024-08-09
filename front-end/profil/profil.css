@@ -44,7 +44,7 @@
     .grid-container {
         overflow-y: auto !important;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) !important;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
         gap: .5rem;
         grid-auto-rows: 20rem;
         border-radius: 1rem;
@@ -89,7 +89,7 @@
 
     .grid-container {
         height: 45rem !important;
-        grid-auto-rows: 30rem;
+        grid-auto-rows: 32rem;
     }
 
     .up-container {

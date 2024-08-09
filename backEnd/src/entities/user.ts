@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Optional } from "@nestjs/common";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Post } from "./post";
 @Entity("User", { schema: "GALLERY" })
 export class User {
   @PrimaryGeneratedColumn({ type: "int", name: "UserId" })
@@ -17,5 +19,12 @@ export class User {
   role: string;
 
   @Column()
+  @Optional()
+  profilLink: string;
+
+  @Column()
   salt: string;
+
+  @OneToMany(() => Post, post => post.user )
+  post: Post[];
 }

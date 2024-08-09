@@ -67,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('hidden add post')
         unBlurSomeDiv()
     }
+   const cookies = document.cookies
+   console.log(cookies);
 
 // all event is here .......
     btnAddPost.addEventListener('click', ()=>{
