@@ -242,14 +242,23 @@ header {
 }
 
 @media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
     header{
         height: 100vh;
+    }
+    .titre {
+        position: absolute;
+        font-size: 2rem;
+        line-height: 2rem;
     }
     .liste1{
         background-color: purple;
         flex-direction: column !important;
         position: absolute;
-        /* transform: translateY(-200px); */
+        
+        transform: translateY(-200px);
         
     }
    .container-input,.boutton{
