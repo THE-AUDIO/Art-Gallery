@@ -1,6 +1,6 @@
-import { Column, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { User } from "./user";
-
+@Entity("Post")
 export class Post {
     @PrimaryGeneratedColumn()
     postId: number;
@@ -12,11 +12,12 @@ export class Post {
     createdAt: string;
 
     @Column()
+
     nbLikes: number;
 
     @Column()
     linkPhoto: string;
 
     @ManyToOne(() => User, user => user.post)
-    user: User[];
+    user: User;
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { postDto } from './dto/post.dto'; // Assurez-vous que le nom du fichier DTO est correct
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import {  Repository } from 'typeorm';
 import { User } from '../entities/user'; // Assurez-vous que le chemin d'importation est correct
 import { Post } from '../entities/post'; // Assurez-vous que le chemin d'importation est correct
 
@@ -14,25 +14,24 @@ export class PostService {
         private userRepository: Repository<User>
     ) {}
 
-    async addPost(postnow: postDto): Promise<Post> {
-        const tempUser = await this.userRepository.findOneBy({ userName: postnow.userName });
-        
-        if (!tempUser) {
-            throw new Error('User not found'); // Gère le cas où l'utilisateur n'est pas trouvé
+    async createPost(createPostDto: postDto , file: Express.Multer.File): Promise<Post> {
+        const { description, createdAt, nbLikes, linkPhoto, userId } = createPostDto;
+        // Find the user by ID
+        const user = await this.userRepository.findOneBy({ userId: userId });
+        if (!user) {
+          throw new Error('User not found');
         }
-
-        const info = {
-            description: postnow.description,
-            createdAt: '',
-            nbLikes: 0,
-            linkPhoto: postnow.linkPhoto,
-            user: tempUser
-        };
-
-        const newPost =  this.postRepository.create()
         
-
-        const savedPost = await this.postRepository.save(newPost);
-        return savedPost;
-    }
+        // Create a new post instance
+        const newPost = this.postRepository.create({
+          description,
+          createdAt,
+          nbLikes,
+          linkPhoto : `http://localhost:3000/photo-post${file.filename}`,
+          user,
+        });
+    
+        // Save the new post to the database
+        return await this.postRepository.save(newPost);
+      }
 }

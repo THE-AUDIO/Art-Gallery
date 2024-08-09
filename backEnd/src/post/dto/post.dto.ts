@@ -1,11 +1,8 @@
 
 export class postDto{
-
-    description!: string;
-
-    nbLike!: number;
-
-    linkPhoto!: string;
-
-    userName!: string;
+    description: string;
+    createdAt: string;
+    nbLikes: number;
+    linkPhoto: string;
+    userId: number;
 }

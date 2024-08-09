@@ -26,5 +26,5 @@ export class User {
   salt: string;
 
   @OneToMany(() => Post, post => post.user )
-  post: Post;
+  post: Post[];
 }
