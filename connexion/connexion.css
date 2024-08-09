@@ -7,20 +7,37 @@
 .last{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center; 
     padding: .5rem 0 !important;
     font-size: .8rem;
 }
-
-.down{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 3rem !important;
+li{
+    margin-top: 1rem;
+    font-size: 12.5px;
 }
+ul{
+   /* background-color: red; */
+    /* width: 92%; */
+    /* display: flex;
+    justify-content: space-around; */
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    text-align: center;
+    /* margin-top: 10px; */
+    /* padding: -1rem 3rem !important; */
+}
+/* .down{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between;
+    padding: -1rem 3rem !important;
+    width: 100%; 
+    margin-top: 10px; 
+} */ 
  main {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     background-color: rgb(247, 240, 240);
     padding: 2rem;
@@ -33,6 +50,7 @@
     width: 100%;
     max-width: 1500px;
     height: 485px;
+    /* width: 100vh;  */
     background-color: rgba(250, 249, 248, 0.858);
     border-radius: 3.3rem;
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
@@ -40,20 +58,21 @@
   
  .inner-box {
     position: absolute;
-    width: calc(100% - 4.1rem);
+    width: calc(100% - 5.1rem);
     height: calc(100% - 4.1rem);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-   
+   /* background-color: red; */
  }
 
  .forms-wrap {
     position: absolute;
     height: 100%;
     width: 30%; 
-    top: 20px;
+    top: 0px;
     left: 10%;
+    /* background-color:black; */
   }
      
  .carousel {
@@ -94,7 +113,17 @@
     justify-content: center;
     align-items: center;
 }
-
+.part1A , .part1B{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.part1A svg{
+    margin-right: 1rem;
+}
+.part1B svg{
+    margin-right: 1rem;
+}
 .part1A{
     width:100%;
     height: 2rem;
@@ -117,7 +146,7 @@ fieldset{
     width: 100%;
     margin-top: 15px;
 }
-.form input[type="email"],input[type="password"]{
+.form input[type="text"],input[type="password"]{
     width: 100%;
     height: 35px;
     border-radius: 6px;
@@ -133,23 +162,25 @@ input::placeholder{
 input[type="password"]{
     margin-top: 10px;
 }
+
 .form a{
     position: relative;
-    left: 22px;
-    color: #000;
+    /* left: 22px; */
+    /* color: #000; */
 }
-input[type="checkbox"]{
+/* input[type="checkbox"]{
    margin-left: -2px;
    
-}
-.check{
-    font-size: small;
-}
-#password{
-    font-size: small;
-}
+} */
+/* #check{
+    font-size: 12.5px;
+    /* align-items: center; 
+} */
+/* #password{
+    font-size: 12.5px;
+} */
 input[type="submit"]{
-    margin-top: 28px;
+    margin-top: 20px;
     background: rgb(93, 0, 255);
     border: none;
     width: 100%;
@@ -158,9 +189,42 @@ input[type="submit"]{
     color: white;
     font-weight: bolder;
 } 
+/* input[type="checkbox"]{
+    margin-top: 4px;
+} */
 
-@media(max-width){
+
+@media(max-width:680px){
+    .carousel{
+        display: none;
+    } 
+    .forms-wrap{
+        width: 80% !important;
 
 
+    }
+}
+@media(max-width:828px){
+    ul{
+       
+        list-style: none;
+        text-align: center;
+        
+       }
+}
+@media(max-width:841px){
+    input[type="submit"]{
+        margin-top: 15px;
+        background: rgb(62, 4, 162);
+        border: none;
+        width: 100%;
+        border-radius: 6px;
+        height: 30px;
+    }
+   .down{
     
+    justify-content: center;
+    
+   }
+     
 }
