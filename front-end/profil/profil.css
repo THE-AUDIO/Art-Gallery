@@ -56,6 +56,10 @@
         transition: 200ms ease-in-out;
         transform: translateY(-350px) !important;
     }
+    .up-container{
+        transition: 200ms ease-in-out;
+        transform: translateY(-350px) !important;
+    }
 }
 
 @media screen and (min-width:1028px) {
