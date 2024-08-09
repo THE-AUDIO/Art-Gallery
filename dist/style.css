@@ -608,14 +608,6 @@ video {
   position: absolute;
 }
 
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
@@ -645,99 +637,8 @@ video {
   top: 0px;
 }
 
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-
 .top-10 {
   top: 2.5rem;
-
-.top-20 {
-  top: 5rem;
-.right-0 {
-  right: 0px;
-}
-
-.right-1 {
-  right: 0.25rem;
-}
-
-
-.right-1\/2 {
-  right: 50%;
-}
-
-.bottom-96 {
-  bottom: 24rem;
-}
-
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
-.bottom-20 {
-  bottom: 5rem;
-}
-
-.bottom-9 {
-  bottom: 2.25rem;
-}
-
-.bottom-80 {
-  bottom: 20rem;
-}
-
-.bottom-8 {
-  bottom: 2rem;
-}
-
-.bottom-6 {
-  bottom: 1.5rem;
-}
-
-.bottom-60 {
-  bottom: 15rem;
-=======
-.right-2 {
-  right: 0.5rem;
-}
-
-.right-3 {
-  right: 0.75rem;
-}
-
-.right-6 {
-  right: 1.5rem;
-}
-
-.top-40 {
-  top: 10rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
-.top-5 {
-  top: 1.25rem;
-}
-
-.left-2 {
-  left: 0.5rem;
-}
-
-.z-50 {
-  z-index: 50;
 }
 
 .z-10 {
@@ -801,14 +702,6 @@ video {
 
 .block {
   display: block;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.mr-5 {
-  margin-right: 1.25rem;
 }
 
 .flex {
@@ -1104,28 +997,20 @@ video {
   background-image: url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg');
 }
 
-.bg-\[url\(\'https\:\/\/wallpapers-clan\.com\/wp-content\/uploads\/2023\/04\/fortnite-style-pfp-01\.jpg\'\)\] {
-  background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-pfp-01.jpg');
-}
-
-.bg-\[url\(\'\'\)\] {
-  background-image: url('');
-}
-
 .bg-\[url\(\'https\:\/\/storage\.canalblog\.com\/26\/02\/269453\/63339105\.jpg\'\)\] {
   background-image: url('https://storage.canalblog.com/26/02/269453/63339105.jpg');
 }
 
-.bg-\[url\(\'https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcSvs1T1UCc2AvLSsu8KXt6BDGZZ9SMfqb5CMw\&s\'\)\] {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvs1T1UCc2AvLSsu8KXt6BDGZZ9SMfqb5CMw&s');
+.bg-\[url\(\'https\:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/d\/dc\/Radama_I\%2C_portrait_by_Ramanankirahina\.jpg\/800px-Radama_I\%2C_portrait_by_Ramanankirahina\.jpg\'\)\] {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Radama_I%2C_portrait_by_Ramanankirahina.jpg/800px-Radama_I%2C_portrait_by_Ramanankirahina.jpg');
+}
+
+.bg-\[url\(\'https\:\/\/wallpapers-clan\.com\/wp-content\/uploads\/2023\/04\/fortnite-style-pfp-01\.jpg\'\)\] {
+  background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-pfp-01.jpg');
 }
 
 .bg-\[url\(\'https\:\/\/www\.wedrivit\.com\/blog\/wp-content\/uploads\/2020\/10\/bernard-buffet\.jpg\'\)\] {
   background-image: url('https://www.wedrivit.com/blog/wp-content/uploads/2020/10/bernard-buffet.jpg');
-}
-
-.bg-\[url\(\'https\:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/d\/dc\/Radama_I\%2C_portrait_by_Ramanankirahina\.jpg\/800px-Radama_I\%2C_portrait_by_Ramanankirahina\.jpg\'\)\] {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Radama_I%2C_portrait_by_Ramanankirahina.jpg/800px-Radama_I%2C_portrait_by_Ramanankirahina.jpg');
 }
 
 .bg-cover {
@@ -1160,10 +1045,6 @@ video {
   padding: 5rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1194,57 +1075,17 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-
 .pl-5 {
   padding-left: 1.25rem;
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
 }
 
 .pr-2 {
   padding-right: 0.5rem;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
 }
 
 .text-center {
@@ -1520,8 +1361,6 @@ video {
 
   .android\:w-5 {
     width: 1.25rem;
-  .android\:hidden {
-    display: none;
   }
 
   .android\:w-5\/6 {
@@ -1595,39 +1434,6 @@ video {
     margin-left: 1.5rem;
   }
 
-  .sm\:mt-4 {
-    margin-top: 1rem;
-  }
-
-
-  .sm\:hidden {
-    display: none;
-  }
-
-  .sm\:h-\[\] {
-    height: ;
-  }
-
-  .sm\:h-\[50\] {
-    height: 50;
-  }
-
-  .sm\:h-\[50vh\] {
-    height: 50vh;
-  }
-
-  .sm\:h-\[40vh\] {
-    height: 40vh;
-  }
-
-  .sm\:h-4 {
-    height: 1rem;
-  }
-
-  .sm\:h-20 {
-    height: 5rem;
-  }
-
   .sm\:h-10 {
     height: 2.5rem;
   }
@@ -1692,72 +1498,6 @@ video {
 @media (min-width: 1024px) {
   .md\:flex {
     display: flex;
-
-  .md\:bottom-60 {
-    bottom: 15rem;
-  .md\:hidden {
-    display: none;
-  }
-
-  .md\:h-1\/4 {
-    height: 25%;
-  }
-
-  .md\:h-1\/3 {
-    height: 33.333333%;
-  }
-
-  .md\:h-1\/2 {
-    height: 50%;
-  }
-
-  .md\:h-full {
-    height: 100%;
-  }
-
-  .md\:h-5\/6 {
-    height: 83.333333%;
-  }
-
-  .md\:h-\[20vh\] {
-    height: 20vh;
-  }
-
-  .md\:h-\[40vh\] {
-    height: 40vh;
-  }
-
-  .md\:h-\[\] {
-    height: ;
-  }
-
-  .md\:h-\[30vh\] {
-    height: 30vh;
-  }
-
-  .md\:h-\[0vh\] {
-    height: 0vh;
-  }
-
-  .md\:h-\[10vh\] {
-    height: 10vh;
-  }
-
-  .md\:h-\[15vh\] {
-    height: 15vh;
-  }
-
-  .md\:h-10 {
-    height: 2.5rem;
-  }
-
-  .md\:h-80 {
-    height: 20rem;
-  }
-
-  .md\:h-40 {
-    height: 10rem;
-
   }
 
   .md\:h-60 {
@@ -1778,10 +1518,6 @@ video {
 
   .md\:w-1\/2 {
     width: 50%;
-  }
-
-  .md\:w-1\/3 {
-    width: 33.333333%;
   }
 
   .md\:w-1\/4 {
@@ -1827,66 +1563,6 @@ video {
 @media (min-width: 1280px) {
   .lg\:bottom-60 {
     bottom: 15rem;
-  .lg\:left-0 {
-    left: 0px;
-  }
-
-  .lg\:right-1 {
-    right: 0.25rem;
-  }
-
-  .lg\:right-1\/4 {
-    right: 25%;
-  }
-
-  .lg\:right-1\/3 {
-    right: 33.333333%;
-  }
-
-  .lg\:right-5 {
-    right: 1.25rem;
-  }
-
-  .lg\:right-40 {
-    right: 10rem;
-  }
-
-  .lg\:right-1\/2 {
-    right: 50%;
-  }
-
-  .lg\:right-2 {
-    right: 0.5rem;
-  }
-
-  .lg\:right-4 {
-    right: 1rem;
-  }
-
-  .lg\:right-8 {
-    right: 2rem;
-  }
-
-  .lg\:left-8 {
-    left: 2rem;
-  }
-
-  .lg\:m-0 {
-    margin: 0px;
-  }
-
-  .lg\:mx-2 {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .lg\:mx-8 {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  .lg\:mt-4 {
-    margin-top: 1rem;
   }
 
   .lg\:block {
@@ -1903,20 +1579,6 @@ video {
 
   .lg\:h-\[12rem\] {
     height: 12rem;
-  .lg\:hidden {
-    display: none;
-  }
-
-  .lg\:h-\[70vh\] {
-    height: 70vh;
-  }
-
-  .lg\:h-\[20v\] {
-    height: 20v;
-  }
-
-  .lg\:h-\[20vh\] {
-    height: 20vh;
   }
 
   .lg\:h-\[15vh\] {
@@ -1929,35 +1591,6 @@ video {
 
   .lg\:h-\[70vh\] {
     height: 70vh;
-  }
-
-  .lg\:h-\[vh\] {
-    height: vh;
-  }
-
-  .lg\:h-\[6vh\] {
-    height: 6vh;
-  }
-
-  .lg\:h-\[30vh\] {
-    height: 30vh;
-  }
-
-
-  .lg\:h-10 {
-    height: 2.5rem;
-  }
-
-  .lg\:h-60 {
-    height: 15rem;
-  }
-
-  .lg\:h-\[14rem\] {
-    height: 14rem;
-  }
-
-  .lg\:h-\[12rem\] {
-    height: 12rem;
   }
 
   .lg\:w-1\/2 {
@@ -1988,10 +1621,6 @@ video {
     width: 50%;
   }
 
-  .lg\:w-1\/3 {
-    width: 33.333333%;
-  }
-
   .lg\:translate-x-1\/2 {
     --tw-translate-x: 50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2014,31 +1643,6 @@ video {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  .lg\:rounded-3xl {
-    border-radius: 1.5rem;
-  }
-
-  .lg\:rounded-lg {
-    border-radius: 0.5rem;
-  }
-
-  .lg\:rounded-xl {
-    border-radius: 0.75rem;
-  .lg\:w-60 {
-    width: 15rem;
-  }
-
-  .lg\:w-\[12rem\] {
-    width: 12rem;
-  }
-
-  .lg\:fill-purple-800 {
-    fill: #6b21a8;
-  }
-
-  .lg\:pt-5 {
-    padding-top: 1.25rem;
-
   }
 }
 
@@ -2053,25 +1657,5 @@ video {
 
   .\32xl\:h-\[25vh\] {
     height: 25vh;
-  }
-
-  .\32xl\:h-\[vh\] {
-    height: vh;
-  }
-
-  .\32xl\:h-\[30vh\] {
-    height: 30vh;
-  }
-
-  .\32xl\:h-\[29vh\] {
-    height: 29vh;
-  }
-
-  .\32xl\:h-\[28vh\] {
-    height: 28vh;
-  }
-
-  .\32xl\:h-\[2vh\] {
-    height: 2vh;
   }
 }
