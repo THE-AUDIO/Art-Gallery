@@ -18,3 +18,7 @@
 .post{
     overflow: hidden;
 }
+.post:hover .container-post{
+    opacity: 1;
+    transition: 250ms ease-in;
+}

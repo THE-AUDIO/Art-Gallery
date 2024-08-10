@@ -17,8 +17,29 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnCloseAddPost = document.getElementById('close-add-post')
     let positionInitial = 20;
 
-// all functions is here
-
+    // all functions is here
+    // add a new post 
+   function  addNewPost(){
+    const fileInput = document.getElementById('file') 
+    const description = document.getElementById('description') 
+    formData = new FormData()
+    formData.append('file', fileInput.files[0]);
+    formData.append('description', description.value);
+    const  apiUrl = 'http://localhost:3000/post/newPost';
+    console.log(formData)
+    fetch(apiUrl,{
+        method: 'POST',
+        body: formData,
+        headers: {
+            // 'Authorization': 'Bearer '+ cookies,
+            // 'Content-Type': 'multipart/form-data',
+        },
+    })
+    .then(response => {
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return response.json(); // Correctly parse the JSON response
+    })
+}
     // this function is used to move up the container
     function toggleClass() {
         container_profil.classList.toggle('up-container')
@@ -51,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function hiddenAddPost(){
         addPostSection.classList.add('add-post');
-        console.log('hidden add post')
         unBlurSomeDiv()
     }
    const cookies = document.cookies
@@ -62,7 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
         addPostSection.classList.remove('add-post');
         blurSomeDiv();
     })
-    btnSavePost.addEventListener('click', hiddenAddPost)
+    btnSavePost.addEventListener('click', ()=>{
+        addNewPost()
+        hiddenAddPost()
+    })
     closeBtn.addEventListener('click', hiddenEditProfil);
     saveBtn.addEventListener('click', hiddenEditProfil);
     btnCloseAddPost.addEventListener('click',hiddenAddPost);
@@ -91,6 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // here if we at the post section this function is used to go back to the previous section
+
+
+
 
     btn_up.addEventListener('click', () => {
         console.log(1);
