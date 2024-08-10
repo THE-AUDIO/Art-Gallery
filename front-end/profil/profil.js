@@ -74,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
         addPostSection.classList.add('add-post');
         unBlurSomeDiv()
     }
-   const cookies = document.cookies
-   console.log(cookies);
 
 // all event is here .......
     btnAddPost.addEventListener('click', ()=>{
@@ -84,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     btnSavePost.addEventListener('click', ()=>{
         addNewPost()
-        hiddenAddPost()
+        // hiddenAddPost()
     })
     closeBtn.addEventListener('click', hiddenEditProfil);
     saveBtn.addEventListener('click', hiddenEditProfil);

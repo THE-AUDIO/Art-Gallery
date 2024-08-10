@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Assuming 'id' is the relevant piece of data to store
             localStorage.setItem('user', jsonData); 
             // Redirect to profile page
-            window.location.href = "../profil/profil.html";
+            window.location.href = "../../connexion/connexion.html";
         })
         .catch((error) => console.error('Erreur:', error));
     });

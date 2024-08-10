@@ -55,11 +55,16 @@ export class AuthService {
             throw new Error ("Invalid password")
           }
           const token = await this.jwtService.signAsync(user)
-          return this.setCookieResponse(res, token)
+          return await this.setCookieResponse(res, token)
         }
       }
-      private setCookieResponse(res: Response, token: string) {
-        res.cookie('authToken', token,{ httpOnly: true,});
+      private async setCookieResponse(res: Response, token: string) {
+        res.cookie('authToken', token,{
+           httpOnly: true, 
+           secure:false,
+          //  domain: '127.0.0.1',
+          //  path:'/'
+          });
       }
 
 

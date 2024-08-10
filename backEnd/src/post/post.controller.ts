@@ -27,6 +27,7 @@ export class PostController {
         @Req() request: Request
     ){
         console.log(post, file);
-       return await this.postService.createPost(post, file,request.cookies['authToken'])
+       return await this.postService.createPost(post, file,request.cookies['authtoken'])
+
     }
 }

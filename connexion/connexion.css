@@ -1,0 +1,228 @@
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.last{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: .5rem 0 !important;
+    font-size: .8rem;
+}
+li{
+    margin-top: 1rem;
+    font-size: 12.5px;
+}
+ul{
+   /* background-color: red; */
+    /* width: 92%; */
+    /* display: flex;
+    justify-content: space-around; */
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    text-align: center;
+    /* margin-top: 10px; */
+    /* padding: -1rem 3rem !important; */
+}
+/* .down{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between;
+    padding: -1rem 3rem !important;
+    width: 100%; 
+    margin-top: 10px; 
+} */ 
+ main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(247, 240, 240);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+  .box {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    height: 485px;
+    /* width: 100vh;  */
+    background-color: rgba(250, 249, 248, 0.858);
+    border-radius: 3.3rem;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+ }
+  
+ .inner-box {
+    position: absolute;
+    width: calc(100% - 5.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   /* background-color: red; */
+ }
+
+ .forms-wrap {
+    position: absolute;
+    height: 100%;
+    width: 30%; 
+    top: 0px;
+    left: 10%;
+    /* background-color:black; */
+  }
+     
+ .carousel {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+    top: 0;
+    background-image: url('../image/brush-96240_1280.jpg');
+    border-radius: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: red; */
+    background-size: cover;
+ } 
+
+ .logo{
+    display: flex;
+    align-items: center;
+    
+    margin-top: -20px;
+ }
+
+ .logo a{
+    margin-left: 30%;
+ }
+  
+.heading{
+    height:70px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.part1A , .part1B{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.part1A svg{
+    margin-right: 1rem;
+}
+.part1B svg{
+    margin-right: 1rem;
+}
+.part1A{
+    width:100%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.part1B{
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+
+fieldset{
+    text-align: center;
+    border: none;
+    border-top: 1px solid black;
+    width: 100%;
+    margin-top: 15px;
+}
+.form input[type="text"],input[type="password"]{
+    width: 100%;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color:#eceaeaed;
+    padding-left: 1rem;
+}
+input::placeholder{
+    font-size: .8rem;
+}
+
+input[type="password"]{
+    margin-top: 10px;
+}
+
+.form a{
+    position: relative;
+    /* left: 22px; */
+    /* color: #000; */
+}
+/* input[type="checkbox"]{
+   margin-left: -2px;
+   
+} */
+/* #check{
+    font-size: 12.5px;
+    /* align-items: center; 
+} */
+/* #password{
+    font-size: 12.5px;
+} */
+input[type="submit"]{
+    margin-top: 20px;
+    background: rgb(93, 0, 255);
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    height: 35px;
+    color: white;
+    font-weight: bolder;
+} 
+/* input[type="checkbox"]{
+    margin-top: 4px;
+} */
+
+
+@media(max-width:680px){
+    .carousel{
+        display: none;
+    } 
+    .forms-wrap{
+        width: 80% !important;
+
+
+    }
+}
+@media(max-width:828px){
+    ul{
+       
+        list-style: none;
+        text-align: center;
+        
+       }
+}
+@media(max-width:841px){
+    input[type="submit"]{
+        margin-top: 15px;
+        background: rgb(62, 4, 162);
+        border: none;
+        width: 100%;
+        border-radius: 6px;
+        height: 30px;
+    }
+   .down{
+    
+    justify-content: center;
+    
+   }
+     
+}
