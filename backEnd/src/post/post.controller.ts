@@ -1,8 +1,8 @@
-import { Body, Controller, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Post, Req, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import multer, { diskStorage } from 'multer';
-import { postDto } from './dto/post.dto';
 import { PostService } from './post.service';
+import { Request } from 'express';
 
 @Controller('post')
 export class PostController {
@@ -22,9 +22,11 @@ export class PostController {
         })
     }))
   async  newPost(
-        @Body() post: postDto,
-        @UploadedFile() file: Express.Multer.File
+        @Body() post: string,
+        @UploadedFile() file: Express.Multer.File,
+        @Req() request: Request
     ){
-       return await this.postService.createPost(post, file)
+        console.log(post, file);
+       return await this.postService.createPost(post, file,request.cookies['authToken'])
     }
 }
