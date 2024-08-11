@@ -27,12 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
     formData.append('description', description.value);
     const  apiUrl = 'http://localhost:3000/post/newPost';
     console.log(formData)
+  const token = localStorage.getItem('token');
+  console.log(token);
     fetch(apiUrl,{
         method: 'POST',
         body: formData,
         headers: {
-            // 'Authorization': 'Bearer '+ cookies,
-            // 'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer '+ token ,
         },
     })
     .then(response => {

@@ -43,9 +43,7 @@ export class AuthService {
         return  savedUser;
       }
 
-      // implement login methode
-
-      async loginUser(res: Response,user: LoginUserDto){
+      async loginUser(user: LoginUserDto){
         const newUser = await this.usersRepository.findOneBy({userName: user.userName})
         if(!newUser) {
            throw new Error ("User not found")
@@ -55,18 +53,12 @@ export class AuthService {
             throw new Error ("Invalid password")
           }
           const token = await this.jwtService.signAsync(user)
-          return await this.setCookieResponse(res, token)
+          return  {'token': token}
+          
         }
       }
-      private async setCookieResponse(res: Response, token: string) {
-        res.cookie('authToken', token,{
-           httpOnly: true, 
-           secure:false,
-          //  domain: '127.0.0.1',
-          //  path:'/'
-          });
-      }
 
+      
 
      async getOneUser(req: Request){
         const token = req.cookies.authToken;

@@ -15,21 +15,19 @@ export class PostService {
         private userRepository: Repository<User>,
         private jwtService: JwtService
     ) {}
-    async createPost(description: any , file: Express.Multer.File, cookie: string): Promise<Post> {
+    async createPost(description: any , file: Express.Multer.File, data: any): Promise<Post> {
       console.log('file dans le service'+ file);
         //decode a cookie using jwt service
-        const userdecode = await this.jwtService.verifyAsync(cookie)
         // Find the user by ID
-        const user = await this.userRepository.findOneBy({ userName: userdecode.userName });
+        const user = await this.userRepository.findOneBy({ userName: data.userName });
         if (!user) {
           throw new Error('User not found');
         }
-        const userId = userdecode.userId;
         // Create a new post instance
         const newPost = this.postRepository.create();
       
         // Save the photo to the public/photo-post folder
-        newPost.linkPhoto = `http://localhost:3000/photo-post${file.filename}`
+        newPost.linkPhoto = `http://localhost:3000/photo-post/${file.filename}`
         newPost.description = description;
         newPost.createdAt = new Date().toISOString();
         newPost.nbLikes = 0;

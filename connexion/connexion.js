@@ -4,7 +4,6 @@ window.addEventListener('DOMContentLoaded', () => {
   async function validateEmail(email) {
     const userName = document.getElementById('Email').value;
     const password = document.getElementById('password').value;
-    console.log(userName, password);
     const apiUrl = 'http://localhost:3000/auth/login';
       // Envoyer une requête POST à l'API avec l'adresse email
        fetch(apiUrl, {
@@ -19,9 +18,19 @@ window.addEventListener('DOMContentLoaded', () => {
         }),
         // credentials:'include',
       })
+      .then(response => response.json())
+      .then((response) => {
+        if (response) {
+          const token = response;
+          console.log(token);
+          localStorage.setItem('token', token);
+        } else {
+          // Gérer les erreurs ou les réponses inattendues
+          console.error('Invalid response:', response);
+        }
+      })
       
       .then(data => {
-        console.log(data);
         // Redirect to profile page
         window.location.href = "../front-end/profil/profil.html";
       })

@@ -1,8 +1,10 @@
-import { Body, Controller, Post, Req, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Post, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import multer, { diskStorage } from 'multer';
 import { PostService } from './post.service';
-import { Request } from 'express';
+import { UserReq } from './decorators/user.decorator';
+import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
+// import { Request } from 'express';
 
 @Controller('post')
 export class PostController {
@@ -21,13 +23,13 @@ export class PostController {
             }
         })
     }))
+  @UseGuards(JwtAuthGuard)
   async  newPost(
         @Body() post: string,
         @UploadedFile() file: Express.Multer.File,
-        @Req() request: Request
+        @UserReq() user: any,
     ){
-        console.log(post, file);
-       return await this.postService.createPost(post, file,request.cookies['authtoken'])
+       return await this.postService.createPost(post, file,user)
 
     }
 }
