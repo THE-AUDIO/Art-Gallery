@@ -32,7 +32,7 @@
                     <path
                         d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
                 </svg>
-                <input type="file" class=" h-5/6 block  w-5/6 text-sm text-slate-500
+                <input type="file" id="file" class=" h-5/6 block  w-5/6 text-sm text-slate-500
                     file:my-3
                     file:h-[2rem]
                     file:rounded-full file:border-0
@@ -45,7 +45,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-pen fill-purple-800 android:h-5 android:w-5 lg:h-8 lg:w-8" viewBox="0 0 16 16">
                     <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
                   </svg>
-                <input type="text" placeholder="Description"
+                <input type="text" id="description" placeholder="Description"
                     class="h-5/6 w-5/6 outline-none pl-5 text-purple-800 font-bold ">
             </div>
             <button type="button"
@@ -119,7 +119,7 @@
         <div class="title text-center text-white android:h-[8vh]  flex items-center justify-start w-full px-5">
             <a href="../current-events/event.html" class="absolute top-10">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                class="bi bi-arrow-left-circle sm:h-10 sm:w-10" viewBox="0 0 16 16">
+                class="bi bi-arrow-left-circle sm:h-10 sm:w-10 lg:h-14 lg:w-14" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
             </svg>
@@ -135,18 +135,18 @@
 
 <!-- identiant section: username and a description -->
     <div class="info flex justify-center items-center flex-col" id="identifiant">
-        <h1 class="text-center text-purple-800 text-xl mt-2 font-bold sm:text-3xl">Nandraina_75</h1>
-        <p class="text-center mt-3 w-5/6 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
-            debitis est veritatis iure consequuntur doloremque animi ipsa odit nesciunt porro.</p>
+        <h1 class="text-center text-purple-800 text-xl mt-2 font-bold sm:text-3xl py-4" id="username"></h1>
+        <!-- <p class="text-center mt-3 w-5/6 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
+            debitis est veritatis iure consequuntur doloremque animi ipsa odit nesciunt porro.</p> -->
     </div>
 <!-- identiant section: username and a description -->
 
 <!-- the div of btn  add post show post  and edit profil -->
     <div class="flex items-center justify-around flex-row mt-5" id="selection">
         <div
-            class="w-1/4 h-20 border-2 rounded-xl flex items-center justify-around flex-col p-2 bg-purple-800 cursor-pointer ">
+            class="w-1/4 h-20 border-2 rounded-xl flex items-center justify-center flex-row p-2 bg-purple-800 cursor-pointer ">
             <span class="text-center text-white font-bold sm:text-2xl select-none"> Mes posts</span>
-            <span class="text-center text-white font-bold sm:text-2xl"> 9 </span>
+            <span class="text-center text-white font-bold sm:text-2xl pl-5"> 9 </span>
         </div>
         <div
             id="btn-edit-profil"
@@ -176,7 +176,7 @@
     <div class="grid-container mt-5" id="post">
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
@@ -185,7 +185,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-pfp-01.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
@@ -194,7 +194,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> <span>105</span> 
@@ -202,7 +202,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-pfp-01.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white  md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white  md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
@@ -211,7 +211,7 @@
         </div>
         <div
             class="post flex justify-end  items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
@@ -220,7 +220,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-pfp-01.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
@@ -229,7 +229,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
@@ -238,7 +238,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-pfp-01.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="android:w-full like md:w-1/3 flex justify-between items-center flex-row text-center text-white bg-purple-800 md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="android:w-full like md:w-1/2 flex justify-between items-center flex-row text-center text-white bg-purple-800 md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg>
@@ -247,7 +247,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/t1/22334884-contexte-art-manipulation-la-nature-concept-numerique-creatif-manipulation-photo.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="android:w-full like md:w-1/3 flex justify-between items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+            <span class="android:w-full like md:w-1/2 flex justify-between items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
@@ -258,7 +258,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-pfp-01.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl shadow-white">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl shadow-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
@@ -267,7 +267,7 @@
         </div>
         <div
             class="post flex justify-end items-center flex-col border-2 rounded-xl bg-[url('https://static.vecteezy.com/ti/photos-gratuite/p1/22191132-colore-chat-blanc-arriere-plan-degoulinant-art-gratuit-photo.jpg')] bg-center bg-no-repeat bg-cover">
-            <span class="like android:w-full md:w-1/3 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl shadow-white">
+            <span class="like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl shadow-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
               </svg> 
