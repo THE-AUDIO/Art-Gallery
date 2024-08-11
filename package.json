@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@lordicon/element": "^1.8.0",
+    "@nest-middlewares/morgan": "^10.0.0",
     "@nestjs/config": "^3.2.3",
     "@nestjs/jwt": "^10.2.0",
     "@nestjs/passport": "^10.0.3",
