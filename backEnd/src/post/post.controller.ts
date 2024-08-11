@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Post, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import multer, { diskStorage } from 'multer';
 import { PostService } from './post.service';
@@ -17,19 +17,25 @@ export class PostController {
             destination: './photo-post',
             filename: (req, file, cb) => {
                 const name : string = file.originalname.split('.')[0];
-                const tmp : Array<string> = file.originalname.split('.')
-                const newFilename: string = name.split('.').join('_')+ '_'+ Date.now()+'.'+file.originalname.split('.')[1];
+                const tmp : Array<string> = file.originalname.split('.');
+                const fileExtension: string = tmp[tmp.length - 1];
+                const newFilename: string = name.split('.').join('_')+ '_'+ Date.now()+'.'+fileExtension;
                 cb(null, newFilename);
             }
         })
     }))
   @UseGuards(JwtAuthGuard)
   async  newPost(
-        @Body() post: string,
+        @Body() description: string,
         @UploadedFile() file: Express.Multer.File,
         @UserReq() user: any,
     ){
-       return await this.postService.createPost(post, file,user)
+       return await this.postService.createPost(description, file,user)
 
+    }
+
+    @Get('all')
+    async viewAllPost(){
+        return await this.postService.viewAllPost()
     }
 }

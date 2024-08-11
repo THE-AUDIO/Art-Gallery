@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
       .then(response => response.json())
       .then((response) => {
         if (response) {
-          const token = response;
+          const token = response.token;
           console.log(token);
           localStorage.setItem('token', token);
         } else {

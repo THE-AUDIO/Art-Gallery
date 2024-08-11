@@ -23,9 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             console.log(data);
             let jsonData = JSON.stringify(data);
-
-            // Assuming 'id' is the relevant piece of data to store
-            localStorage.setItem('user', jsonData); 
             // Redirect to profile page
             window.location.href = "../../connexion/connexion.html";
         })

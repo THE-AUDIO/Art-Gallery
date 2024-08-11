@@ -28,6 +28,7 @@ export class AuthService {
             email: userData.email,
             password,
             role: role,
+            profilLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-F43pCDdWJiOb6iCizBPQW6_1g1blQhnJMzrMnIIsC4tndQqwz1Vu9ZHjo626EaaESeA&usqp=CAU' ,
             salt,
         }
         console.log(newUser);
@@ -60,17 +61,11 @@ export class AuthService {
 
       
 
-     async getOneUser(req: Request){
-        const token = req.cookies.authToken;
-        if(!token) return null
-        try {
-          const user = await this.jwtService.verifyAsync(token)
-          const newUser = await this.usersRepository.findOneBy({userName: user.userName})
-          delete newUser.password,
-          delete newUser.salt
-          return newUser;
-        } catch (error) {
-          return null
-        }
+     async getOneUser(user: any){   
+         const newUser =   await this.usersRepository.findOneBy({userName: user.userName})
+         delete newUser.password;
+         delete newUser.salt
+         return newUser;
+         
       }
 }

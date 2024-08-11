@@ -14,11 +14,14 @@ export class JwtAuthGuard implements CanActivate{
     }
 
     const token = authHeader.split(' ')[1];  // Assume "Bearer <token>"
+    console.log(token);
+    
 
     try {
       const payload =  this.jwtService.verify(token);
       delete payload.iat;
       delete payload.exp;
+      
       request.user =  payload;  // Attach the payload to the request object
       
       return request;
