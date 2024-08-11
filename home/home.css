@@ -163,7 +163,14 @@ header {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    opacity: 0;
+    transform: translateY(90px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
+.gallery_img.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .gallery-item1 {
     grid-column-start: 1;
@@ -241,32 +248,39 @@ header {
     }
 }
 
-@media (max-width: 768px) {
-    header{
-        height: 100vh;
-    }
+@media (min-width:650px) and (max-width:768px){
     .liste1{
-        background-color: purple;
-        flex-direction: column !important;
-        position: absolute;
-        /* transform: translateY(-200px); */
-        
+        width: 50%;
     }
-   .container-input,.boutton{
-    display: none;
-   }
-   .nav-bar{
-    margin:0 auto;
-    background-color: black;
-    height: 3rem;
-    margin-top: 0%;
-    justify-content: space-between !important;
-   }
-   .Topic{
-    margin: 10%;
-   }
-   #icon-menu{
-    display: block !important;
-    fill: white ;
-   }
+    .nav-bar{
+        margin-top:0.5rem;
+    }
+    .titre {
+        margin: 5rem auto;
+        margin-bottom: .8rem;
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .recherche {
+        width: 70%;
+    }
+
+    header {
+        height: 33rem;
+    }
+
+    .section2 {
+        padding: 0;
+        height: 97vh !important;
+        width: 100% !important;
+        margin: 0 auto;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .gallery {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 6.5vw);
+    }
 }
