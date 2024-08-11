@@ -9,10 +9,10 @@ async function bootstrap() {
   app.use(morgan('dev'))
   app.use('/photo-post', express.static('photo-post'));
 
-  const corsOption = {
-    origin: ['http://127.0.0.1:5500/front-end/inscription/inscription.html?']
-  }
-  app.enableCors(corsOption)
+  // const corsOption = {
+  //   origin: ['http://127.0.0.1:5500/front-end/inscription/inscription.html?']
+  // }
+  app.enableCors()
   await app.listen(3000);
 }
 bootstrap();
