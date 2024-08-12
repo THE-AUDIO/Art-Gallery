@@ -6,7 +6,9 @@
    opacity: 1 !important;
    transition: 500ms ease-in-out;
 }
+
 #container{
+    z-index: 1 !important;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-auto-rows: 40rem;
@@ -17,6 +19,7 @@
 }
 .post{
     overflow: hidden;
+    z-index: 10 !important;
 }
 .post:hover .container-post{
     opacity: 1;

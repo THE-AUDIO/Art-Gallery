@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let container_profil = document.getElementById('profil-container');
     let identifiant = document.getElementById('identifiant')
     let selection = document.getElementById('selection')
-    let post = document.getElementById('post')
+    var post = document.getElementById('post')
     const saveBtn = document.getElementById('save-btn')
     const closeBtn = document.getElementById('close')
     const showEditProfilBtn = document.getElementById('btn-edit-profil')
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnSavePost = document.getElementById('btn-add-post');
     let btnCloseAddPost = document.getElementById('close-add-post')
     let username = document.getElementById('username');
-    let positionInitial = 20;
+    let positionInitial = 30;
 
     // Tous les fonction sont ici
     // ajout de nouveau post 
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
    }
 
-    (async function getPostForOneUser(){
+    async function getPostForOneUser(){
         // declaration de l'url qui doit traiter le requête
         const apiUrl = 'http://localhost:3000/post/mypost'
        const reponse = await fetch(apiUrl,{
@@ -171,6 +171,21 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         })
         const data = await  reponse.json()
-        console.log(data);
-    })();
+       data.forEach(element =>{
+        console.log(element)
+         post.innerHTML+= `
+         <div
+         class="post flex justify-end items-center flex-col border-2 rounded-xl relative overflow-hidden">
+         <img class="w-full h-full object-cover" src="${element.linkPhoto}" alt="">
+         <div class="absolute like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+             <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+           </svg> 
+           <span>${element.nbLikes}</span>
+         </div>
+     </div>
+         `
+       })
+    };
+    getPostForOneUser();
 })

@@ -2,8 +2,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     const profil = document.getElementById('profil');
     const eltProfil = document.getElementById('elt-profil');
     const container = document.getElementById('container');
-    const signOutBtn = document.getElementById('user-menu-item-2')
+    const signOutBtn = document.querySelector('.signOut')
     function signOut(){
+        console.log(signOutBtn)
         localStorage.removeItem('token');
     }
     async function getAllPost() {
@@ -55,5 +56,5 @@ window.addEventListener('DOMContentLoaded', async () => {
         eltProfil.classList.toggle('none-profil');
     });
 
-    signOutBtn.addEventListener('click', signOut())
+    // signOutBtn.addEventListener('click', signOut())
 });

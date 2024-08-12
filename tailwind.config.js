@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./*/*/*.html",
     "./frontend/profil/profil.html",
+    "./connexion/connexion.html",
   ],
   theme: {
     extend: {

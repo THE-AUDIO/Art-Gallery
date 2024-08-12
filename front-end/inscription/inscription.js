@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }),
         })
         .then(response => {
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            return response.json(); // parse le response en json
-        })
-        .then(() => {
-            // Redirect to profile page
-            window.location.href = "../../connexion/connexion.html";
+            if (!response.ok){
+                throw new Error(`HTTP error! status: ${response.status}`);
+            } else{
+                response.json(); // parse le response en json
+                window.location.href = "../../connexion/connexion.html";
+            }
         })
         // gestion des erreurs
         .catch((error) => console.error('Erreur:', error));
