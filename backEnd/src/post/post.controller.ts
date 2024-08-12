@@ -26,16 +26,26 @@ export class PostController {
     }))
   @UseGuards(JwtAuthGuard)
   async  newPost(
-        @Body() description: string,
+        @Body() description: any,
         @UploadedFile() file: Express.Multer.File,
         @UserReq() user: any,
-    ){
-       return await this.postService.createPost(description, file,user)
+    ){ 
+        console.log(description);
+        
+       return await this.postService.createPost(description.description, file,user)
 
     }
 
     @Get('all')
     async viewAllPost(){
         return await this.postService.viewAllPost()
+    }
+    
+    @UseGuards(JwtAuthGuard)
+    @Get('mypost')
+    async getAllPostforOneUser(
+        @UserReq() user: any
+    ){
+        return await this.postService.getPostForOneUser(user.userName)
     }
 }

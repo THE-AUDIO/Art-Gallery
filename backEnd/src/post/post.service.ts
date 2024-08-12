@@ -36,4 +36,8 @@ export class PostService {
   async viewAllPost() {
     return await this.postRepository.find()
   }
+  async getPostForOneUser(userName: any){
+    const newUser = await this.userRepository.findOneBy({userName: userName})
+    return await this.postRepository.findBy({user: newUser})
+  }
 }

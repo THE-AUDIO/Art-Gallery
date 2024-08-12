@@ -40,7 +40,6 @@ ul{
     height: 100vh;
     overflow: hidden;
     background-color: rgb(247, 240, 240);
-    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,8 +48,7 @@ ul{
     position: relative;
     width: 100%;
     max-width: 1500px;
-    height: 485px;
-    /* width: 100vh;  */
+    height: 60vh;
     background-color: rgba(250, 249, 248, 0.858);
     border-radius: 3.3rem;
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
@@ -85,7 +83,6 @@ ul{
     border-radius: 2rem;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-color: red; */
     background-size: cover;
  } 
 
@@ -115,6 +112,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(128, 128, 128, 0.608);
 }
 .part1A svg{
     margin-right: 1rem;
@@ -198,8 +196,9 @@ input[type="submit"]{
     } 
     .forms-wrap{
         width: 80% !important;
-
-
+    }
+    main{
+        padding: 2rem !important;
     }
 }
 @media(max-width:828px){

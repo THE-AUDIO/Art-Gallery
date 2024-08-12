@@ -1,7 +1,7 @@
 
-// await the document load  
+// on attend que la page soit chargé
 document.addEventListener("DOMContentLoaded", function () {
-    // declaration of the html element
+    // recuperation des element html 
     const btn_up = document.getElementById('btn-float')
     let container_profil = document.getElementById('profil-container');
     let identifiant = document.getElementById('identifiant')
@@ -18,32 +18,43 @@ document.addEventListener("DOMContentLoaded", function () {
     let username = document.getElementById('username');
     let positionInitial = 20;
 
-    // all functions is here
-    // add a new post 
+    // Tous les fonction sont ici
+    // ajout de nouveau post 
     function addNewPost() {
-        const fileInput = document.getElementById('file')
-        const description = document.getElementById('description')
-        formData = new FormData()
-        formData.append('file', fileInput.files[0]);
-        formData.append('description', description.value);
+        // recuperation des element via la formulaire 
+        const fileInput = document.getElementById('file')// fichier
+        const description = document.getElementById('description')//description du fichier
+        formData = new FormData()// instanciation de objet formData 
+        formData.append('file', fileInput.files[0]);// ajouter le fichier dans la formData
+        formData.append('description', description.value);//ajoute la description dans la formData
+        //declaration de l'url qui va reçevoir la requête
         const apiUrl = 'http://localhost:3000/post/newPost';
+        // recuperation des informations des l'utilisateur dans la localStorage
         const token = localStorage.getItem('token');
+        // envoie de la requête POST à l'api avec la formData
         fetch(apiUrl, {
             method: 'POST',
             body: formData,
             headers: {
+                // ajout de l'information de l'utilisateur dans l'entête du requête
                 'Authorization': 'Bearer ' + token,
             },
         })
             .then(response => {
+                // si la reponse n'est pas bon en retourne l'erreur
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.json(); // Correctly parse the JSON response
+                return response.json(); // parser le retoure en json
             })
     }
 
+    //fonction pour rechercher un utilisateur  qui vien de se connecter
     function findOneUser(){
+        // declaration de l'url qui vient de reçevoir la requête 
         const apiUrl = 'http://localhost:3000/auth/user'
+        // recuperation du token dans la localStorage 
+        //le token contient l'information des utlisateur mais encoder 
         const token = localStorage.getItem('token');
+        // envoie de la requête GET à l'api avec l'authorization en entête
         fetch(apiUrl,
             {
                 method: 'GET',
@@ -56,10 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
             username.textContent = data.userName;
            })
     }
+    // appel du fonction  
     findOneUser();
 
     
-    // this function is used to move up the container
+    // une fonction pour monter des section cibler en ajoutant et relevant une classe
     function toggleClass() {
         container_profil.classList.toggle('up-container')
         identifiant.classList.toggle('up-container')
@@ -67,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         post.classList.toggle('up-container')
         post.classList.toggle('up-post');
     }
+    // une fonction pour flouter des elements 
 
     function blurSomeDiv() {
         post.style.filter = 'blur(32px)'
@@ -76,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.background = 'black'
 
     }
-
+    // une fonction pour deflouter des elements cibler
     function unBlurSomeDiv() {
         post.style.filter = 'blur(0)'
         selection.style.filter = 'blur(0)'
@@ -84,28 +97,34 @@ document.addEventListener("DOMContentLoaded", function () {
         identifiant.style.filter = 'blur(0)'
         document.body.style.background = 'white'
     }
+    // une fonction pour masquer la section de modification du profil
     function hiddenEditProfil() {
         contentEditProfil.style.display = 'none';
         unBlurSomeDiv();
     }
-
+    // une fonction pour masquer la section d'ajout de nouveau post
     function hiddenAddPost() {
         addPostSection.classList.add('add-post');
         unBlurSomeDiv()
     }
 
-    // all event is here .......
+    // tous les ecoutes des évenements necessaire pour le bon fonction de cette page sont ici
+
     btnAddPost.addEventListener('click', () => {
+        // affichage de nouveau en enlevant la classe add post car cette classe le rend invisible
         addPostSection.classList.remove('add-post');
+        // flouter tous les elements html a part la section add post 
         blurSomeDiv();
     })
     btnSavePost.addEventListener('click', () => {
+        // ici on appelle fonction d'envoye de requêtes pour sauvegarder dans la base de donné les element les element  dans la formulaire
         addNewPost()
-        // hiddenAddPost()
     })
+    // pour  masquer des section profil une fois quand on cliquer sur le bouton close
     closeBtn.addEventListener('click', hiddenEditProfil);
-    saveBtn.addEventListener('click', hiddenEditProfil);
-    btnCloseAddPost.addEventListener('click', hiddenAddPost);
+    btnCloseAddPost.addEventListener('click', hiddenAddPost);                         
+    // pour  masquer des section add post une fois quand on cliquer sur le bouton save
+    saveBtn.addEventListener('click', hiddenEditProfil); 
 
     // here we make visible a edit profil section
     showEditProfilBtn.addEventListener('click', () => {
@@ -131,10 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // here if we at the post section this function is used to go back to the previous section
-
-
-
-
+   if(btn_up){
     btn_up.addEventListener('click', () => {
         console.log(1);
         post.scrollTo({
@@ -142,4 +158,19 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth"
         })
     })
+   }
+
+    (async function getPostForOneUser(){
+        // declaration de l'url qui doit traiter le requête
+        const apiUrl = 'http://localhost:3000/post/mypost'
+       const reponse = await fetch(apiUrl,{
+            method: 'GET',
+
+            headers: {
+                'Authorization': 'Bearer '+ localStorage.getItem('token')
+            },
+        })
+        const data = await  reponse.json()
+        console.log(data);
+    })();
 })

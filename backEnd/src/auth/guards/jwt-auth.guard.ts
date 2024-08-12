@@ -14,7 +14,6 @@ export class JwtAuthGuard implements CanActivate{
     }
 
     const token = authHeader.split(' ')[1];  // Assume "Bearer <token>"
-    console.log(token);
     
 
     try {

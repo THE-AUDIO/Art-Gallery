@@ -653,10 +653,6 @@ video {
   z-index: 50;
 }
 
-.z-0 {
-  z-index: 0;
-}
-
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -710,6 +706,22 @@ video {
 
 .mt-\[10vh\] {
   margin-top: 10vh;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mr-20 {
+  margin-right: 5rem;
 }
 
 .block {
@@ -1001,10 +1013,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\'\)\] {
-  background-image: url('');
-}
-
 .bg-\[url\(\'https\:\/\/static\.vecteezy\.com\/ti\/photos-gratuite\/p1\/22191132-colore-chat-blanc-arriere-plan-degoulinant-art-gratuit-photo\.jpg\'\)\] {
   background-image: url('https://static.vecteezy.com/ti/photos-gratuite/p1/22191132-colore-chat-blanc-arriere-plan-degoulinant-art-gratuit-photo.jpg');
 }
@@ -1109,6 +1117,10 @@ video {
   padding-right: 0.5rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1170,6 +1182,20 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .opacity-0 {

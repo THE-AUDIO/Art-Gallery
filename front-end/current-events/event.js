@@ -2,7 +2,10 @@ window.addEventListener('DOMContentLoaded', async () => {
     const profil = document.getElementById('profil');
     const eltProfil = document.getElementById('elt-profil');
     const container = document.getElementById('container');
-
+    const signOutBtn = document.getElementById('user-menu-item-2')
+    function signOut(){
+        localStorage.removeItem('token');
+    }
     async function getAllPost() {
         const apiUrl = 'http://localhost:3000/post/all';
         const token = localStorage.getItem('token');
@@ -19,7 +22,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                     <img class="w-full h-full object-cover" src="${post.linkPhoto}" alt="">
                     <div class="absolute z-10 opacity-0 transition container-post android:w-full h-1/4 android:text-xl flex justify-around items-center flex-col text-center p-2 text-white md:text-2xl font-bold md:py-2 android:py-1 shadow-2xl shadow-white">
                         <span class="text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, hic.
+                            ${post.description}
                         </span>
                         <span class="flex justify-around items-center flex-row w-1/2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="pink" class="bi bi-suit-heart-fill transition active:animate-bounce" viewBox="0 0 16 16">
@@ -51,4 +54,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     profil.addEventListener('click', () => {
         eltProfil.classList.toggle('none-profil');
     });
+
+    signOutBtn.addEventListener('click', signOut())
 });
