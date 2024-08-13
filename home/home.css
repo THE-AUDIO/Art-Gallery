@@ -24,7 +24,11 @@ header{
 .bt {
     width: 100%;
 }
-
+.bt a{
+    font-size: 1.2rem;
+    width: 100%;
+    font-weight: bold;
+}
 .boutton {
     width: 10%;
     border: 1px purple solid;
