@@ -32,29 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('token', data.token);
         window.location.href = "../front-end/profil/profil.html";
       }
-      // .then(response => response.json())
-      // .then((response) => {
-      //   if (response) {
-      //     const token = response.token;
-      //     console.log(response);
-      //     // localStorage.setItem('token', token);
-      //     // window.location.href = "../front-end/profil/profil.html";
-
-      //   } else {
-      //     // Gérer les erreurs ou les réponses inattendues
-      //     console.error('Invalid response:', response);
-      //   }
-      // })
-      
-
-      // if (data.isValid) {
-      //   console.log('L\'adresse email est valide.');
-      // } else {
-      //   console.log('L\'adresse email est invalide.');
-      // }
-      // .catch((error)=>{
-      //   console.error('Erreur lors de la validation de l\'user:', error);
-      // })
     }
     btn.addEventListener("click", (e) => {
       e.preventDefault()
