@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(fileData);
         fileData.append('file', fileInput.files[0]); // ajouter le fichier dans la formData
         const token = localStorage.getItem('token');
-        // envoie de la requête POST à l'api avec la formData
         console.log(token)
         fetch(apiUrl, {
             method: 'PUT',
@@ -49,27 +48,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Tous les fonction sont ici
     // ajout de nouveau post 
     function addNewPost() {
-        // recuperation des element via la formulaire 
-        const fileInput = document.getElementById('file')// fichier
-        const description = document.getElementById('description')//description du fichier
-        formData = new FormData()// instanciation de objet formData 
-        formData.append('file', fileInput.files[0]);// ajouter le fichier dans la formData
-        formData.append('description', description.value);//ajoute la description dans la formData
-        //declaration de l'url qui va reçevoir la requête
+        const fileInput = document.getElementById('file');
+        const description = document.getElementById('description');
+        formData = new FormData();
+        formData.append('file', fileInput.files[0]);
+        formData.append('description', description.value);
         const apiUrl = 'http://localhost:3000/post/newPost';
-        // recuperation des informations des l'utilisateur dans la localStorage
         const token = localStorage.getItem('token');
-        // envoie de la requête POST à l'api avec la formData
         fetch(apiUrl, {
             method: 'POST',
             body: formData,
             headers: {
-                // ajout de l'information de l'utilisateur dans l'entête du requête
                 'Authorization': 'Bearer ' + token,
             },
         })
             .then(response => {
-                // si la reponse n'est pas bon en retourne l'erreur
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data =  response.json(); // parser le retoure en json
             })
@@ -77,13 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //fonction pour rechercher un utilisateur  qui vien de se connecter
     function findOneUser(){
-        // declaration de l'url qui vient de reçevoir la requête 
         const apiUrl = 'http://localhost:3000/auth/user'
-        // recuperation du token dans la localStorage 
-        //le token contient l'information des utlisateur mais encoder 
         const token = localStorage.getItem('token');
-        // envoie de la requête GET à l'api avec l'authorization en entête
-        fetch(apiUrl,
+            fetch(apiUrl,
             {
                 method: 'GET',
                 headers: {
@@ -141,23 +130,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // tous les ecoutes des évenements necessaire pour le bon fonction de cette page sont ici
 
     btnAddPost.addEventListener('click', () => {
-        // affichage de nouveau en enlevant la classe add post car cette classe le rend invisible
         addPostSection.classList.remove('add-post');
-        // flouter tous les elements html a part la section add post 
         blurSomeDiv();
     })
     btnSavePost.addEventListener('click', () => {
-        // ici on appelle fonction d'envoye de requêtes pour sauvegarder dans la base de donné les element les element  dans la formulaire
         addNewPost()
     })
     // pour  masquer des section profil une fois quand on cliquer sur le bouton close
     closeBtn.addEventListener('click', hiddenEditProfil);
-    btnCloseAddPost.addEventListener('click', hiddenAddPost);                         
+    btnCloseAddPost.addEventListener('click', hiddenAddPost);
+
     // pour  masquer des section add post une fois quand on cliquer sur le bouton save
     saveBtn.addEventListener('click', ()=>{
         upDateProfil()
         hiddenEditProfil();
-        // si vous souhaitez charger les nouveaux post il suffit de faire un appel à la fonction getAllPost() dans le event.js
     }); 
 
     // here we make visible a edit profil section
@@ -167,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     // we listen a scroll event in the div post and call the toogle function
-    // if some condition is verified
     var states = true;
     btn_up.style.opacity = '0';
     post.addEventListener('scroll', () => {
