@@ -16,8 +16,32 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnSavePost = document.getElementById('btn-add-post');
     let btnCloseAddPost = document.getElementById('close-add-post')
     let username = document.getElementById('username');
-    let positionInitial = 30;
+    let profilImage = document.getElementById('profil-image');
 
+    let positionInitial = 30;
+    function upDateProfil(){
+        const fileInput = document.getElementById('file-profil')// fichier
+        const apiUrl = 'http://localhost:3000/user/profil'
+        fileData = new FormData();
+        console.log(fileData)
+        fileData.append('file', fileInput.files[0]);// ajouter le fichier dans la formData
+        const token = localStorage.getItem('token');
+        // envoie de la requête POST à l'api avec la formData
+        fetch(apiUrl, {
+            method: 'POST',
+            body: fileData,
+            headers: {
+                // ajout de l'information de l'utilisateur dans l'entête du requête
+                'Authorization': 'Bearer ' + token,
+            },
+        })
+        .then(response => {
+            if(!response.ok){
+                throw new Error
+            }
+           return response.json()
+        })
+    }
     // Tous les fonction sont ici
     // ajout de nouveau post 
     function addNewPost() {
@@ -43,7 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => {
                 // si la reponse n'est pas bon en retourne l'erreur
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.json(); // parser le retoure en json
+                const data =  response.json(); // parser le retoure en json
+                console.log(data);
             })
     }
 
@@ -64,7 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
             })
            .then(response => response.json())
            .then(data => {
-            username.textContent = data.userName;
+               username.textContent = data.userName;
+               profilImage.src = `${data.profilLink}`
+               console.log(data);
            })
     }
     // appel du fonction  
@@ -124,7 +151,11 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.addEventListener('click', hiddenEditProfil);
     btnCloseAddPost.addEventListener('click', hiddenAddPost);                         
     // pour  masquer des section add post une fois quand on cliquer sur le bouton save
-    saveBtn.addEventListener('click', hiddenEditProfil); 
+    saveBtn.addEventListener('click', ()=>{
+        upDateProfil()
+        hiddenEditProfil();
+        // si vous souhaitez charger les nouveaux post il suffit de faire un appel à la fonction getAllPost() dans le event.js
+    }); 
 
     // here we make visible a edit profil section
     showEditProfilBtn.addEventListener('click', () => {
@@ -172,7 +203,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         const data = await  reponse.json()
        data.forEach(element =>{
-        console.log(element)
          post.innerHTML+= `
          <div
          class="post flex justify-end items-center flex-col border-2 rounded-xl relative overflow-hidden">
@@ -188,4 +218,5 @@ document.addEventListener("DOMContentLoaded", function () {
        })
     };
     getPostForOneUser();
+    
 })

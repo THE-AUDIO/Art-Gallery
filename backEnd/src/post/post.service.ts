@@ -4,7 +4,6 @@ import { Repository } from 'typeorm';
 import { User } from '../entities/user'; // Assurez-vous que le chemin d'importation est correct
 import { Post } from '../entities/post'; // Assurez-vous que le chemin d'importation est correct
 import { JwtService } from '@nestjs/jwt';
-import { Response } from 'express';
 
 @Injectable()
 export class PostService {
@@ -13,7 +12,6 @@ export class PostService {
     private postRepository: Repository<Post>,
     @InjectRepository(User)
     private userRepository: Repository<User>,
-    private jwtService: JwtService
   ) { }
   async createPost(description: string, file: Express.Multer.File, data: any): Promise<Post> {
     // Find the user by username
