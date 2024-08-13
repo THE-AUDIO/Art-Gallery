@@ -8,6 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(morgan('dev'))
   app.use('/photo-post', express.static('photo-post'));
+  app.use('/user-pdp', express.static('user-pdp'));
 
   // const corsOption = {
   //   origin: ['http://127.0.0.1:5500/front-end/inscription/inscription.html?']

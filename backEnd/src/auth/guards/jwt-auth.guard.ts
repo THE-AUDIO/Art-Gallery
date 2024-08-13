@@ -8,22 +8,18 @@ export class JwtAuthGuard implements CanActivate{
    canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
     const authHeader = request.headers['authorization'];
-    
     if (!authHeader) {
       throw new UnauthorizedException('Authorization header not found');
     }
 
     const token = authHeader.split(' ')[1];  // Assume "Bearer <token>"
-    console.log(token);
-    
-
     try {
       const payload =  this.jwtService.verify(token);
+      console.log(payload)
       delete payload.iat;
       delete payload.exp;
       
       request.user =  payload;  // Attach the payload to the request object
-      
       return request;
     }
      catch (error) {

@@ -20,7 +20,6 @@ export class AuthService {
     async create(userData: CreateUserDto): Promise<User> {
         // Hash the password before saving it
         const salt = await bcrypt.genSalt();
-        console.log(salt);
         const password = await bcrypt.hash(userData.password, 10);
         const role = 'artist'
         const newUser = {
@@ -31,7 +30,6 @@ export class AuthService {
             profilLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-F43pCDdWJiOb6iCizBPQW6_1g1blQhnJMzrMnIIsC4tndQqwz1Vu9ZHjo626EaaESeA&usqp=CAU' ,
             salt,
         }
-        console.log(newUser);
         
         const user = this.usersRepository.create(newUser);
         // Await the save operation and capture the saved user object

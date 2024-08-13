@@ -8,6 +8,7 @@ import * as dotenv from 'dotenv';
 import { User } from './entities/user';
 import { PostModule } from './post/post.module';
 import { Post } from './entities/post';
+import { UserModule } from './user/user.module';
 
 
 dotenv.config()
@@ -27,7 +28,8 @@ dotenv.config()
       synchronize: true, // Assurez-vous que cette valeur est correcte pour votre environnement
     }),
     AuthModule,
-    PostModule, // Assurez-vous que AuthModule est correctement configuré
+    PostModule,
+    UserModule, // Assurez-vous que AuthModule est correctement configuré
   ],
   controllers: [AppController],
   providers: [AppService],

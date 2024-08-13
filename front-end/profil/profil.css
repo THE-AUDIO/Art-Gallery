@@ -1,7 +1,11 @@
 .like{
     background-color: rgba(0, 0, 0, 0.8);
 }
-
+#profil-image{
+    max-height: 180px !important;
+    max-width: 180px !important;
+    object-fit: cover;
+}
 .head {
     border-radius: 0 0 5rem 5rem;
     transition: 200ms ease-in-out !important;
