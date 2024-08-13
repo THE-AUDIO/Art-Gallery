@@ -82,7 +82,9 @@ input {
     border-radius: 0 1rem 1rem 0;
 
 }
-
+ul li a {
+    font-size: 1.2rem;
+}
 .icon svg {
     fill: white;
 }
@@ -128,10 +130,16 @@ body {
 header {
     height: 40rem;
 }
+.Topic{
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .section2 {
     height: 34rem;
-    margin: 5rem;
+    margin-top: 5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .liste2 {
@@ -155,6 +163,8 @@ header {
 }
 
 .gallery {
+    width: 100% !important;
+    height: 90vh !important;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 4.5vw);

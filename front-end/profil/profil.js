@@ -17,18 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnCloseAddPost = document.getElementById('close-add-post')
     let username = document.getElementById('username');
     let profilImage = document.getElementById('profil-image');
+    const nbPost = document.getElementById('nbPost')
 
     let positionInitial = 30;
     function upDateProfil(){
-        const fileInput = document.getElementById('file-profil')// fichier
-        const apiUrl = 'http://localhost:3000/user/profil'
-        fileData = new FormData();
-        console.log(fileData)
-        fileData.append('file', fileInput.files[0]);// ajouter le fichier dans la formData
+        const fileInput = document.getElementById('file-profil'); // fichier
+        const apiUrl = 'http://localhost:3000/user/profil';
+        const fileData = new FormData();
+        console.log(fileData);
+        fileData.append('file', fileInput.files[0]); // ajouter le fichier dans la formData
         const token = localStorage.getItem('token');
         // envoie de la requête POST à l'api avec la formData
+        console.log(token)
         fetch(apiUrl, {
-            method: 'POST',
+            method: 'PUT',
             body: fileData,
             headers: {
                 // ajout de l'information de l'utilisateur dans l'entête du requête
@@ -37,11 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => {
             if(!response.ok){
-                throw new Error
+                throw new Error;
             }
-           return response.json()
+           return response.json();
         })
+        .catch(error => console.error('Error:', error));
     }
+    
     // Tous les fonction sont ici
     // ajout de nouveau post 
     function addNewPost() {
@@ -68,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 // si la reponse n'est pas bon en retourne l'erreur
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data =  response.json(); // parser le retoure en json
-                console.log(data);
             })
     }
 
@@ -202,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         })
         const data = await  reponse.json()
+        nbPost.textContent = `${data.length}`
        data.forEach(element =>{
          post.innerHTML+= `
          <div
