@@ -1,12 +1,12 @@
 
-// await the document load  
+// on attend que la page soit chargé
 document.addEventListener("DOMContentLoaded", function () {
-    // declaration of the html element
+    // recuperation des element html 
     const btn_up = document.getElementById('btn-float')
     let container_profil = document.getElementById('profil-container');
     let identifiant = document.getElementById('identifiant')
     let selection = document.getElementById('selection')
-    let post = document.getElementById('post')
+    var post = document.getElementById('post')
     const saveBtn = document.getElementById('save-btn')
     const closeBtn = document.getElementById('close')
     const showEditProfilBtn = document.getElementById('btn-edit-profil')
@@ -16,14 +16,41 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnSavePost = document.getElementById('btn-add-post');
     let btnCloseAddPost = document.getElementById('close-add-post')
     let username = document.getElementById('username');
-    let positionInitial = 20;
+    let profilImage = document.getElementById('profil-image');
+    const nbPost = document.getElementById('nbPost')
 
-    // all functions is here
-    // add a new post 
+    let positionInitial = 30;
+    function upDateProfil(){
+        const fileInput = document.getElementById('file-profil'); // fichier
+        const apiUrl = 'http://localhost:3000/user/profil';
+        const fileData = new FormData();
+        console.log(fileData);
+        fileData.append('file', fileInput.files[0]); // ajouter le fichier dans la formData
+        const token = localStorage.getItem('token');
+        console.log(token)
+        fetch(apiUrl, {
+            method: 'PUT',
+            body: fileData,
+            headers: {
+                // ajout de l'information de l'utilisateur dans l'entête du requête
+                'Authorization': 'Bearer ' + token,
+            },
+        })
+        .then(response => {
+            if(!response.ok){
+                throw new Error;
+            }
+           return response.json();
+        })
+        .catch(error => console.error('Error:', error));
+    }
+    
+    // Tous les fonction sont ici
+    // ajout de nouveau post 
     function addNewPost() {
-        const fileInput = document.getElementById('file')
-        const description = document.getElementById('description')
-        formData = new FormData()
+        const fileInput = document.getElementById('file');
+        const description = document.getElementById('description');
+        formData = new FormData();
         formData.append('file', fileInput.files[0]);
         formData.append('description', description.value);
         const apiUrl = 'http://localhost:3000/post/newPost';
@@ -37,14 +64,15 @@ document.addEventListener("DOMContentLoaded", function () {
         })
             .then(response => {
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.json(); // Correctly parse the JSON response
+                const data =  response.json(); // parser le retoure en json
             })
     }
 
+    //fonction pour rechercher un utilisateur  qui vien de se connecter
     function findOneUser(){
         const apiUrl = 'http://localhost:3000/auth/user'
         const token = localStorage.getItem('token');
-        fetch(apiUrl,
+            fetch(apiUrl,
             {
                 method: 'GET',
                 headers: {
@@ -53,13 +81,16 @@ document.addEventListener("DOMContentLoaded", function () {
             })
            .then(response => response.json())
            .then(data => {
-            username.textContent = data.userName;
+               username.textContent = data.userName;
+               profilImage.src = `${data.profilLink}`
+               console.log(data);
            })
     }
+    // appel du fonction  
     findOneUser();
 
     
-    // this function is used to move up the container
+    // une fonction pour monter des section cibler en ajoutant et relevant une classe
     function toggleClass() {
         container_profil.classList.toggle('up-container')
         identifiant.classList.toggle('up-container')
@@ -67,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         post.classList.toggle('up-container')
         post.classList.toggle('up-post');
     }
+    // une fonction pour flouter des elements 
 
     function blurSomeDiv() {
         post.style.filter = 'blur(32px)'
@@ -76,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.background = 'black'
 
     }
-
+    // une fonction pour deflouter des elements cibler
     function unBlurSomeDiv() {
         post.style.filter = 'blur(0)'
         selection.style.filter = 'blur(0)'
@@ -84,28 +116,35 @@ document.addEventListener("DOMContentLoaded", function () {
         identifiant.style.filter = 'blur(0)'
         document.body.style.background = 'white'
     }
+    // une fonction pour masquer la section de modification du profil
     function hiddenEditProfil() {
         contentEditProfil.style.display = 'none';
         unBlurSomeDiv();
     }
-
+    // une fonction pour masquer la section d'ajout de nouveau post
     function hiddenAddPost() {
         addPostSection.classList.add('add-post');
         unBlurSomeDiv()
     }
 
-    // all event is here .......
+    // tous les ecoutes des évenements necessaire pour le bon fonction de cette page sont ici
+
     btnAddPost.addEventListener('click', () => {
         addPostSection.classList.remove('add-post');
         blurSomeDiv();
     })
     btnSavePost.addEventListener('click', () => {
         addNewPost()
-        // hiddenAddPost()
     })
+    // pour  masquer des section profil une fois quand on cliquer sur le bouton close
     closeBtn.addEventListener('click', hiddenEditProfil);
-    saveBtn.addEventListener('click', hiddenEditProfil);
     btnCloseAddPost.addEventListener('click', hiddenAddPost);
+
+    // pour  masquer des section add post une fois quand on cliquer sur le bouton save
+    saveBtn.addEventListener('click', ()=>{
+        upDateProfil()
+        hiddenEditProfil();
+    }); 
 
     // here we make visible a edit profil section
     showEditProfilBtn.addEventListener('click', () => {
@@ -114,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     // we listen a scroll event in the div post and call the toogle function
-    // if some condition is verified
     var states = true;
     btn_up.style.opacity = '0';
     post.addEventListener('scroll', () => {
@@ -131,10 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // here if we at the post section this function is used to go back to the previous section
-
-
-
-
+   if(btn_up){
     btn_up.addEventListener('click', () => {
         console.log(1);
         post.scrollTo({
@@ -142,4 +177,35 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth"
         })
     })
+   }
+
+    async function getPostForOneUser(){
+        // declaration de l'url qui doit traiter le requête
+        const apiUrl = 'http://localhost:3000/post/mypost'
+       const reponse = await fetch(apiUrl,{
+            method: 'GET',
+
+            headers: {
+                'Authorization': 'Bearer '+ localStorage.getItem('token')
+            },
+        })
+        const data = await  reponse.json()
+        nbPost.textContent = `${data.length}`
+       data.forEach(element =>{
+         post.innerHTML+= `
+         <div
+         class="post flex justify-end items-center flex-col border-2 rounded-xl relative overflow-hidden">
+         <img class="w-full h-full object-cover" src="${element.linkPhoto}" alt="">
+         <div class="absolute like android:w-full md:w-1/2 flex justify-around items-center flex-row text-center text-white md:text-2xl font-bold px-5 md:py-2 android:text-sm android:py-1 shadow-2xl">
+             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+             <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+           </svg> 
+           <span>${element.nbLikes}</span>
+         </div>
+     </div>
+         `
+       })
+    };
+    getPostForOneUser();
+    
 })

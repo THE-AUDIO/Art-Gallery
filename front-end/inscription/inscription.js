@@ -1,10 +1,16 @@
+// on attend le chargement de la page 
 document.addEventListener("DOMContentLoaded", function() {
+    // récupération du bouton creer
     const btn = document.getElementById('btn');
+    // écouteur d'évènement lors du click sur le bouton
     btn.addEventListener('click', function() {
+        // récupération des données du formulaire
         let userName = document.getElementById("username").value;
         let password = document.getElementById("password").value;
         let email = document.getElementById("email").value;
+        // url de l'api qui va recevoir la requête de création du compte
         const   apiUrl = 'http://localhost:3000/auth/create'
+        // envoie de la requête POST à l'api avec les données du formulaire
         fetch(apiUrl, {
             method: 'POST',
             headers: {
@@ -17,15 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }),
         })
         .then(response => {
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            return response.json(); // Correctly parse the JSON response
+            if (!response.ok){
+                throw new Error(`HTTP error! status: ${response.status}`);
+            } else{
+                response.json(); // parse le response en json
+                window.location.href = "../../connexion/connexion.html";
+            }
         })
-        .then(data => {
-            console.log(data);
-            let jsonData = JSON.stringify(data);
-            // Redirect to profile page
-            window.location.href = "../../connexion/connexion.html";
-        })
+        // gestion des erreurs
         .catch((error) => console.error('Erreur:', error));
     });
 });
