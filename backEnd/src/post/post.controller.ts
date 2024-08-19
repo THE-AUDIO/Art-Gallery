@@ -1,9 +1,10 @@
-import { Body, Controller, Get, Post, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Post, Put, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import multer, { diskStorage } from 'multer';
 import { PostService } from './post.service';
 import { UserReq } from './decorators/user.decorator';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
+import { postDto } from './dto/post.dto';
 // import { Request } from 'express';
 
 @Controller('post')
@@ -47,5 +48,11 @@ export class PostController {
         @UserReq() user: any
     ){
         return await this.postService.getPostForOneUser(user.userName)
+    }
+    @Put('like')
+    async updateNbLike(
+        @Body() post: postDto
+    ){  
+        return await this.postService.updateNbLike(post)
     }
 }

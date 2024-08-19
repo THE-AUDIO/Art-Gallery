@@ -1,7 +1,7 @@
 document.addEventListener('scroll', function() {
   const images = document.querySelectorAll('.gallery_img');
   const windowHeight = window.innerHeight;
-
+//getBoundingClientRect()
   images.forEach(image => {
     const imageTop = image.getBoundingClientRect().top;
     const imageBottom = image.getBoundingClientRect().bottom;

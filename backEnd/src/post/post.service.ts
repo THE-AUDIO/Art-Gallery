@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 import { User } from '../entities/user'; // Assurez-vous que le chemin d'importation est correct
 import { Post } from '../entities/post'; // Assurez-vous que le chemin d'importation est correct
 import { JwtService } from '@nestjs/jwt';
+import { postDto } from './dto/post.dto';
 
 @Injectable()
 export class PostService {
@@ -37,5 +38,11 @@ export class PostService {
   async getPostForOneUser(userName: any){
     const newUser = await this.userRepository.findOneBy({userName: userName})
     return await this.postRepository.findBy({user: newUser})
+  }
+
+  async updateNbLike(post: postDto){
+    const like = post.nbLikes + 1
+    const nbUpdate =  await  this.postRepository.update(post.postId,{nbLikes: like})
+    return nbUpdate;
   }
 }

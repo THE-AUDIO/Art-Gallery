@@ -1,5 +1,5 @@
 
 export class postDto{
-    description: string;
-    userId: number;
+    postId: number;
+    nbLikes: number;
 }

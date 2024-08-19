@@ -6,7 +6,9 @@
    opacity: 1 !important;
    transition: 500ms ease-in-out;
 }
-
+#profil{
+    object-fit: cover;
+}
 #container{
     z-index: 1 !important;
     display: grid;
